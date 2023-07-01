@@ -1,0 +1,54 @@
+
+.disorder_card{
+    display: flex;
+    flex-direction: column;
+}
+
+.disorder_card img{
+    width: 80%;
+    /* align-items: center; */
+    border: 0px solid red;
+    margin: 15px 0px;
+    max-width: 500px;
+}
+
+.title_of_disorder{
+    border: 0px solid blue;
+    margin-bottom: 10px;
+}
+
+.what_is{
+    border: 0px solid blue;
+    margin: 10px 0px;
+}
+
+.symptoms{
+    border: 0px solid blue;
+}
+
+.symptoms h2{
+    border: 0px solid red;
+}
+
+/* .symptoms h2::first-letter{
+    color: green;
+} */
+
+.strategies{
+    border: 0px solid blue;
+    margin: 15px 0px;
+}
+
+.strategies h2{
+    border: 0px solid red;
+    /* margin-bottom: 10px; */
+}
+
+/* .strategies h2::first-letter{
+    color: green;
+} */
+
+li{
+    margin-left: 20px;
+    margin-top: 5px;
+}

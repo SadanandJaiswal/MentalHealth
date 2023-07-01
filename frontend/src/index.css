@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url('https://tse4.mm.bing.net/th?id=OIP.pMbaUypN-gfPjxsY6R0gLAHaFj&pid=Api&P=0&h=180');
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.main-container {
+  display: flex;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.sidebar {
+  background: rgb(0, 7, 61);
+  color: white;
+  min-height: 100vh;
+}
+
+.routes {
+  color: white;
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+
+.logo {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  height: 30px;
+  padding: 10px;
+}
+
+.search input {
+  border: none;
+  /* width: 160px; */
+  margin-left: 10px;
+  border-radius: 5px;
+  background: rgb(238, 238, 238);
+  /* padding: 5px 10px; */
+}
+
+.link {
+  display: flex;
+  color: white;
+  gap: 10px;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.link:hover {
+  border-right: 4px solid white;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  background-color: rgb(45, 51, 89);
+}
+
+.active {
+  border-right: 4px solid white;
+  background-color: rgb(45, 51, 89);
+}
+
+.link_text {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+
+/* Sleep Section */
+.sleep-div {
+  display: flex;
+}
+
+.leftdiv {
+  display: flex;
+}
+.leftdiv img{
+  width: 30%;
+  border-radius: 2rem;
+  border: 2px solid white;
+  margin: 5px;
+}
+.leftdiv p{
+  font-size: 1.5rem;
+  color: white;
+  width: 70%;
+  padding: 20px;
+}
+
+.rightdiv {
+  display: flex;
+}
+.rightdiv img{
+  width: 30%;
+  border-radius: 2rem;
+  border: 2px solid white;
+  margin: 5px;
+}
+.rightdiv p{
+  font-size: 1.5rem;
+  color: white;
+  width: 70%;
+  padding: 20px;
+}
+
+.rightdiv ul {
+  padding: 20px;
+  width: 60%;
+}
+
+.basicdiv h1 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 3rem;
+}
+.basicdiv p{
+  color:rgb(0, 255, 76);
+  font-size: 1.5rem;
+}
+.basicdiv ul{
+  color:rgb(246, 255, 143);
+  font-size: 1.5rem;
+}
+
+.disorders h1 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 3rem;
+}
+.disorders p{
+  color:rgb(0, 255, 76);
+  font-size: 1.5rem;
+}
+
+.myCard {
+  background-color: white;
+  display: flex;
+}
+.myCard img {
+  width: 40%;
+  border-radius: 2rem;
+  border: 2px solid white;
+  margin: 5px;
+}
+.myCard .content {
+  width: 60%;
+  padding: 20px;
+  font-size: 1.3rem;
+  color: black;
+}
+body::-webkit-scrollbar{
+  width: 2px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb{
+  width: 2px;
+  background-color: blue;
+}

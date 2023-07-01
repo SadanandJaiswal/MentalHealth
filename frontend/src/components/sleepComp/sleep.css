@@ -1,0 +1,57 @@
+.bettersleep {
+    max-width: 90%;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .bettersleep h2,
+  .bettersleep h3,
+  .bettersleep p {
+    opacity: 0;
+    animation: fadeInText 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .bettersleep h2 {
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+  }
+  
+  .bettersleep h3 {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  .bettersleep p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .bettersleep p strong {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
