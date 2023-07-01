@@ -1,64 +1,168 @@
-/* .timer-container {
+.timer-container {
+  width: 100px;
+  height: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
 .timer {
   position: relative;
-  width: 300px;
-  height: 300px;
-  cursor: pointer;
-}
-
-.clock {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #f2f2f2;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  background-color: #cf8f83;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(152, 226, 33, 0.2);
+  overflow: hidden;
 }
 
-.hour-hand,
-.minute-hand,
-.second-hand {
+.timer:before {
+  content: '';
   position: absolute;
-  background-color: #222;
-  transform-origin: bottom center;
+  top: -10px;
+  left: -10px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  box-sizing: border-box;
+  z-index: 1;
+  animation: wave 5s linear infinite;
 }
 
-.hour-hand {
-  width: 8px;
-  height: 80px;
-  border-radius: 4px;
-  top: 60px;
-  left: calc(50% - 4px);
-}
-
-.minute-hand {
-  width: 6px;
-  height: 120px;
-  border-radius: 3px;
-  top: 30px;
-  left: calc(50% - 3px);
-}
-
-.second-hand {
-  width: 4px;
-  height: 140px;
-  border-radius: 2px;
-  top: 10px;
-  left: calc(50% - 2px);
-  background-color: #ff453a;
+.timer:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  box-sizing: border-box;
   z-index: 2;
+  animation: wave 2s linear infinite;
+  opacity: 50%;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(1) rotate(15deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2) rotate(360deg);
+    opacity: 0.4;
+  }
 }
 
 .timer-content {
+  position: absolute;
+}
+
+.timer-content h1 {
+  font-size: 12px;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.timer-content {
+  position: absolute;
+  /* width: 100%;
+  height: 100%; */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-content h1 {
+  font-size: 12px;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.button-container {
+  margin-top: 10px;
+}
+
+.reset-button {
+  padding: 4px 5px;
+  background-color: #333;
+  /* margin-top: 10px; */
+  margin-bottom: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+ 
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* .reset-button:hover {
+  background-color: #555;
+}
+
+:focus {
+  outline: none;
 } */
+
+/* CSS */
+.reset-button {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 5px;
+  background-color: #333;
+  /* margin-top: 10px; */
+  margin-bottom: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+ 
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  letter-spacing: 1px;
+  /* padding: 13px 20px 13px; */
+  outline: 0;
+  border: solid rgb(34, 206, 57);
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.reset-button:after {
+  content: "";
+  background-color: #ffe54c;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.reset-button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .reset-button {
+    padding: 5px 15px 2px;
+  }
+}

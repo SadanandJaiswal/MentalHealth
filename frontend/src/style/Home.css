@@ -1,0 +1,55 @@
+.medDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.medCard {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.4);
+    flex-wrap: nowrap;
+    margin: 5px;
+    width: 30%;
+    overflow: hidden;
+    align-items: center;
+}
+
+.viewBTN {
+    width: 50px;
+    height: 100%;
+    margin: auto;
+    /* margin-top: 25%; */
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background: transparent;
+    /* background-color:'red' */
+}
+
+.viewBTN div{
+    border-radius: 12px;
+    padding: 5px;
+    background-color: white;
+
+}
+
+.sleepDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.sleepCard {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.4);
+    flex-wrap: nowrap;
+    margin: 5px;
+    width: 30%;
+}
+
+h2{
+    color:white;
+}

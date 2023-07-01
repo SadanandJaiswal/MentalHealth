@@ -25,6 +25,10 @@ import MeditationDetails from './components/meditation/meditationDetatil'
 function App() {
   return (
     <>
+      <div className="btn-33">
+                <button className="fixed-button button-33" style={{fontSize:"13px"}}>LOGIN/SIGNUP</button>
+                <p> </p>
+      </div>
       <Router>
         <Sidebar>
         <Routes>
@@ -48,6 +52,7 @@ function App() {
         </Routes>
         </Sidebar>
       </Router>
+      {/* <h2>Thanks for Visiting</h2> */}
     </>
   );
 }

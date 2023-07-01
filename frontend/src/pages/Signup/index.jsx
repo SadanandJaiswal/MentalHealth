@@ -3,16 +3,17 @@ import styles from "./styles.module.css";
 import axios from "axios";
 import {useState,useEffect} from 'react';
 import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
 
 	const [user, setUser] = useState({
-		name: "",
-		email: "",
-		password: "",
-	  });
+		name:"",
+		email:"",
+		password:""
+	});
 
-	// const { name, email, password } = user;
+	const navigate = useNavigate();
 
 	const googleAuth = () => {
 		window.open(
@@ -33,7 +34,18 @@ function Signup() {
 			console.log(response);
 			if(response.data)
 			{
-				Cookies.set('userData', {"email":response.data.user.email}, { expires: 10*86400*1000 }); // Expires in 7 days
+				axios.get("/me").then(res=>{
+					Cookies.set('userName', res.data.user.name, { expires: 10*86400*1000 }); // Expires in 7 days
+					Cookies.set('userEmail',res.data.user.email, { expires: 10*86400*1000 });
+					Cookies.set('userData', res.data ,  { expires: 10*86400*1000 });
+					if(Cookies.get('userName'))
+					{
+					  navigate('/');
+					}
+				})
+				.catch((err)=>{
+					console.log('unable to fetch user having error ',err);
+				})
 			}
 		})
 		.catch((e)=>{

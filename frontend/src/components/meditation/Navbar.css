@@ -1,15 +1,22 @@
-.navbar {
-  margin: 50px auto;
-  width: fit-content;
-  background-color: transparent;
+/* meditationcard */
+.navbar-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+
+  flex-wrap: wrap; /* Allow wrapping of list items */
+}
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #10c6db; /* Set the desired color for the title */
+  transition: color 0.3s; /* Add a smooth transition effect */
 }
 
-.navbar-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping of list items */
+.title:hover {
+  color: #ff0000; /* Set the desired color on hover */
+  cursor: pointer; /* Add a pointer cursor on hover */
 }
 
 .row {
@@ -44,25 +51,8 @@
   box-shadow: 0 0 5px 0 rgba(83, 7, 7, 0.7);
 }
 
-.card {
-  /* max-width: 400px;
-  margin: 0 auto 20px; */
-  /* background-image: linear-gradient(to right, #8e2de2, #4a00e0); */
-  /* background: rgb(2,0,36);
-  background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 28%, rgba(5,92,176,1) 40%, rgba(0,212,255,1) 55%, rgba(6,77,166,1) 75%);
-  background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 28%, rgba(5,92,176,1) 40%, rgba(0,212,255,1) 55%, rgba(6,77,166,1) 75%);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 28%, rgba(5,92,176,1) 40%, rgba(0,212,255,1) 55%, rgba(6,77,166,1) 75%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#064da6",GradientType=1); */
-  /* background-image: linear-gradient(130deg, rgba(6, 123, 49, 0.5) 0%, rgba(6, 123, 49, 0.5) 20%,rgba(18, 146, 42, 0.5) 20%, rgba(18, 146, 42, 0.5) 40%,rgba(29, 169, 36, 0.5) 40%, rgba(29, 169, 36, 0.5) 60%,rgba(41, 192, 29, 0.5) 60%, rgba(41, 192, 29, 0.5) 80%,rgba(52, 215, 22, 0.5) 80%, rgba(52, 215, 22, 0.5) 100%),linear-gradient(220deg, rgb(108, 127, 22) 0%, rgb(108, 127, 22) 16.667%,rgb(98, 151, 30) 16.667%, rgb(98, 151, 30) 33.334%,rgb(88, 175, 39) 33.334%, rgb(88, 175, 39) 50.001%,rgb(77, 198, 47) 50.001%, rgb(77, 198, 47) 66.668%,rgb(67, 222, 56) 66.668%, rgb(67, 222, 56) 83.335%,rgb(57, 246, 64) 83.335%, rgb(57, 246, 64) 100.002%); */
-  /* background-color: #f9f9f9;background-image: repeating-linear-gradient(45deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(22.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(45deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(157.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),linear-gradient(90deg, rgb(66,51,8),rgb(230,168,168)); */
-  /* background-image: repeating-linear-gradient(45deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(22.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(45deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(157.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, hsla(253,0%,98%,0.03) 0px, hsla(253,0%,98%,0.03) 1px,transparent 1px, transparent 12px),linear-gradient(90deg, rgb(13, 8, 66),rgb(230, 168, 209)); */
-  /* background-image: repeating-linear-gradient(135deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px, transparent 10px, transparent 11px),
-    repeating-linear-gradient(22.5deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px, transparent 10px, transparent 11px),
-    linear-gradient(90deg, hsl(194,74%,56%), hsl(266,74%,56%), hsl(338,74%,56%), hsl(50,74%,56%), hsl(122,74%,56%)); */
-  /* border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(162, 5, 5, 0.1);
-  padding: 20px; */
-}
+
+
 
 
 .card-heading {
@@ -85,7 +75,8 @@
   text-align: center;
   margin-bottom: 2px;
   font-size: 8px; /* Decrease font size for card content */
-  font-family: Arial, sans-serif; /* Use suitable font */
+  font-family: Arial, sans-serif;
+   /* Use suitable font */
 }
 
 .step-list {
@@ -94,7 +85,9 @@
   margin: 0;
 }
 
-.scrollable-container {
+.scrollable-navbar-container {
+  height: 100%;
+width: 100%;
   height: 150px;
   overflow: auto;
   overflow-y: scroll;
@@ -112,7 +105,7 @@
   color: #ff4081;
 }
 
-.video-container {
+.video-navbar-container {
   text-align: center;
 }
 
@@ -176,12 +169,12 @@
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 3px 12px;
+  padding: 3px 2px;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;
   border: 0;
-  font-size: 16px;
+  font-size: 5x;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -203,12 +196,9 @@
   backdrop-filter: blur(1.8rem);
 }
 
-.title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
 
-.video-container {
+
+.video-navbar-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   width: 100%;
@@ -230,104 +220,32 @@
 /* .row {
   display: flex;
   flex-wrap: wrap;
-  margin: -10px;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  color: #002bff;
+}
+
+/* .col-md-4 {
+  flex-basis: 33.33%;
+  max-width: 33.33%;
 } */
 
-.column {
-  flex: 1 1 50%;
-  padding: 10px;
-}
-
-.section {
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-ol,
-ul {
-  margin-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-.meditation-details {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 56.25%; /* Aspect ratio of 16:9 */
-  margin-bottom: 20px;
-}
-
-.video-container .react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200%;
-}
-
-.description p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
 .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col-md-6 {
-  width: 50%;
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-
-.section {
-  margin-bottom: 20px;
-}
-
-.section h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.section ol,
-.section ul {
-  margin-left: 20px;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.section li {
-  margin-bottom: 5px;
-}
-
-/* Navbar.css */
-.meditation-card {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
+<<<<<<< HEAD
+
+.card-body {
+  font-family: "Roboto", sans-serif;
+  font-size: 5px;
+  /* Adjust the font size as needed */
+}
+=======
 /* .card {
   position: relative;
   width: 300px;
@@ -335,18 +253,217 @@ li {
   overflow: hidden;
   border-radius: 4px;
 } */
+>>>>>>> 7eddbbfdb70907dbe8ddfb3ee4faad289085ee11
+
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+.name {
+  padding: 12px;
+  font-size: 6px;
+  color: #333;
+}
+
+.name:hover {
+  color: #000;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+
+
+
+@media all and (max-width: 75px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+/* navber */
+.
+
+/* Custom styling for the navbar links */
+.navbar-nav .nav-item {
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #a7daff;
+}
+
+/* Custom styling for the navbar brand/logo */
+.navbar-brand {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* step */
+/* Custom styling for the steps */
+.step-list {
+  list-style-type: decimal;
+  /* padding-left: 20px; */
+}
+
+.step-item {
+  margin-bottom: 10px;
+}
+
+.step-number {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* <!-- HTML !-->
+<button class="button-85" role="button">Button 85</button> */
+
+/* CSS */
+/* 
+<!-- HTML !-->
+<button class="button-73" role="button">Button 73</button> */
+
+/* CSS */
+.button-li {
+  appearance: none;
+  background-color: #f59a9a;
+  border-radius: 4em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size:0.5px;
+  font-weight: 50;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  height: 25px;
+  width: 200px;
+  /* padding: 1rem 1.3rem; */
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-li:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button-li:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .button-li {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
+}
+
+/* Style the video navbar-container */
+.video-container {
+  display: flex;
+  justify-content: flex-start;
+  height: 250px;
+  width:500px;
+}
+
+.react-player-wrapper {
+  position: relative;
+  width: 60%;
+ 
+}
+
+/* Style the video player */
+.react-player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  width: 100%;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Adjust the margin for the steps section */
+
+/* .section.steps-section {
+  margin-right: 20px; /* Adjust the margin as needed */
+/* } */
 
 .video-container {
   position: relative;
-  width: 100%;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+}
+
+.react-player-wrapper {
+  position: absolute;
+  font-size: x-small;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+}
+
+/* card videocontatineer 
+ */
+
+.video-navbar-container {
+  position: relative;
+  width: 100%;
+ 
 }
 
 .react-player-wrapper {
   position: absolute;
   top: 0;
   left: 0;
+
 }
+
+
 
 .card-heading {
   margin-top: 10px;
@@ -355,10 +472,10 @@ li {
 
 .card-link {
   display: block;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   text-align: center;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
+  font-size:12px;
+  /* padding: 0.5rem 1rem; */
   background-color: lightgray;
   border: none;
   border-radius: 5px;
@@ -442,7 +559,7 @@ li {
   animation: fade-in 0.5s ease-in-out, slide-up 0.5s ease-in-out;
 } */
 
-.video-container:hover {
+.video-navbar-container:hover {
   animation: shake 5s linear;
 }
 
@@ -468,15 +585,15 @@ li {
   text-decoration: none;
   color: inherit;
 }
-
+/* 
 .card-content {
   padding: 1rem;
-}
+} */
 
 .card-title {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
 }
 
 .card-description {
@@ -525,3 +642,44 @@ li {
     width: 100vw;
   }
 } */
+/* Navbar.css */
+
+/* Blurred background for benefits and problems sections */
+.blur {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  list-style-type: none;
+  margin: 0;
+  padding: 0; margin-bottom: 10px; text-align: center;
+  margin-top: 20px; backdrop-filter: blur(3px); /* Adjust the blur radius as needed */
+}
+/* Navbar.css */
+
+/* Responsive styling for the video container */
+/* .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+   /* 16:9 aspect ratio (divide height by width)  */
+  /* overflow: hidden; }*/
+
+.video-container {
+  position: relative;
+  width: 640px;
+  height: 360px;
+  overflow: hidden;
+}
+
+.embed-responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

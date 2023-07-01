@@ -3,12 +3,25 @@ import styles from "./styles.module.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Cookies from 'js-cookie';
+// import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+// Inside your component
+// const navigate = useNavigate();
+
+// Example usage
+// navigate('/home');
+
+
 
 function Login() {
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
+
+
+  const [userName,setUserName] = useState("");
 
   const { email, password } = user;
 
@@ -19,6 +32,9 @@ function Login() {
     );
   };
 
+  // const history = useHistory();
+  const navigate = useNavigate();
+
   const handelLogin = (event) => {
     event.preventDefault();
 
@@ -28,7 +44,20 @@ function Login() {
 		console.log(response);
 		if(response.data)
 		{
-			Cookies.set('userData', {"email":email}, { expires: 10*86400*1000 }); // Expires in 7 days
+      axios.get("/me").then(res=>{
+        Cookies.set('userName', res.data.user.name, { expires: 10*86400*1000 }); // Expires in 7 days
+        Cookies.set('userEmail',res.data.user.email, { expires: 10*86400*1000 });
+        Cookies.set('userData', res.data ,  { expires: 10*86400*1000 });
+        if(Cookies.get('userName'))
+        {
+          navigate('/');
+        }
+
+        // setUser(res.data);
+      })
+      .catch((err)=>{
+        console.log('unable to fetch user having error ',err);
+      })
 		}
 	})
 	.catch((e)=>{

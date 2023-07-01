@@ -102,7 +102,7 @@ const Sidebar = ({ children }) => {
 
   return (
     <div className='main-container'>
-        <motion.div animate={{ width: isOpen ? '200px' : '36px', transition: {
+        <motion.div animate={{ width: isOpen ? '200px' : '55px', transition: {
             duration: 0.5,
             type: 'spring',
             damping: 11,
@@ -116,13 +116,14 @@ const Sidebar = ({ children }) => {
                         exit="hidden"
                         className='logo'
                     > 
-                        KKG Chill 
+                        jevanBandhu 
                     </motion.h1>}
                 <div className='bars'>
                     <FaBars onClick={toggle} />
                 </div>
             </div>
-            <div className='search'>
+          
+            {/* <div className='search'>
                 <div className='search-icon'>
                     <BiSearch />
                 </div>
@@ -136,7 +137,7 @@ const Sidebar = ({ children }) => {
                             placeholder='Search...' 
                         />) }
                 </AnimatePresence>
-            </div>
+            </div> */}
             <section className='routes'>
                 {routes.map((route,index) => (
                     <NavLink activeClassName="active" to={route.path} key={route.name} className='link'>

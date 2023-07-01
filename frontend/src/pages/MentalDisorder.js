@@ -22,17 +22,17 @@ const MentalDisorder = () => {
     {
       title: 'Depression',
       description: 'Mood disorder affecting daily activities. Explore symptoms and seek support.',
-      imageUrl: 'https://www.gannett-cdn.com/presto/2020/04/28/USAT/fe0903a9-e372-4f69-8931-f5507ef12121-Crystal_Run_Healthcare_article_6_in_article_image.jpg?crop=4499,2531,x0,y228&width=3200&height=1801&format=pjpg&auto=webp',
+      imageUrl: 'https://i.postimg.cc/432zL9c2/dep.jpg',
     },
     {
       title: 'Loneliness',
       description: 'Emotional state of disconnection. Discover impacts and strategies for building connections.',
-      imageUrl: 'https://www.gannett-cdn.com/presto/2020/04/28/USAT/fe0903a9-e372-4f69-8931-f5507ef12121-Crystal_Run_Healthcare_article_6_in_article_image.jpg?crop=4499,2531,x0,y228&width=3200&height=1801&format=pjpg&auto=webp',
+      imageUrl: 'https://i.postimg.cc/wvVdY96r/lon.jpg',
     },
     {
       title: 'Stress',
       description: 'Body’s response to demands or pressures. Understand causes and develop healthy coping mechanisms.',
-      imageUrl: 'https://www.gannett-cdn.com/presto/2020/04/28/USAT/fe0903a9-e372-4f69-8931-f5507ef12121-Crystal_Run_Healthcare_article_6_in_article_image.jpg?crop=4499,2531,x0,y228&width=3200&height=1801&format=pjpg&auto=webp',
+      imageUrl: 'https://i.postimg.cc/tJkRkhZY/stress.jpg',
     },
   ];
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+// import '../style/sleep.css';
 // MAterial UI
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -28,7 +29,7 @@ const Sleep = () => {
       <div className='sleep-div'>
 
         {/* Introduction */}
-        <Card sx={{ width: '50%', marginRight: '1rem' }}>
+        <Card sx={{ width: '50%', marginRight: '1rem', backdropFilter: 'blur(8px)', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '20px' }}>
           <CardMedia
             sx={{ height: 140 }}
             image="https://i.cbc.ca/1.6534070.1658953881!/fileImage/httpImage/sleep-app-reviews.jpg"
@@ -47,14 +48,14 @@ const Sleep = () => {
             </p>
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small" onClick={clickHandler1}>Learn More</Button>
+          <CardActions style={{alignContent: 'center', margin: 'auto', width: 'fit-content'}}>
+            <Button size="small" style={{backgroundColor: 'lavenderblush', fontWeight: 'bold'}}>Share</Button>
+            <Button size="small" onClick={clickHandler1} style={{backgroundColor: 'lavenderblush', fontWeight: 'bold'}}>Learn More</Button>
           </CardActions>
         </Card>
 
         {/* Sleep Basics */}
-        <Card sx={{ width: '50%', marginRight: '1rem'}}>
+        <Card sx={{ width: '50%', marginRight: '1rem', backdropFilter: 'blur(8px)', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '20px' }}>
           <CardMedia
             sx={{ height: 140 }}
             image="https://www.cchwyo.org/images/blog/2022/iStock-851356944.jpg"
@@ -73,14 +74,14 @@ const Sleep = () => {
             </p>
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small" onClick={clickHandler2}>Learn More</Button>
+          <CardActions style={{alignContent: 'center', margin: 'auto', width: 'fit-content'}}>
+            <Button size="small" style={{backgroundColor: 'lavenderblush', fontWeight: 'bold'}}>Share</Button>
+            <Button size="small" onClick={clickHandler1} style={{backgroundColor: 'lavenderblush', fontWeight: 'bold'}}>Learn More</Button>
           </CardActions>
         </Card>
 
         {/* Sleep Disorders */}
-        <Card sx={{ width: '50%', marginRight: '1rem' }}>
+        <Card sx={{ width: '50%', marginRight: '1rem', backdropFilter: 'blur(8px)', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '20px' }}>
           <CardMedia
             sx={{ height: 140 }}
             image="https://www.drlalitmahajan.com/wp-content/uploads/2019/11/23668ed.jpg"
@@ -99,14 +100,14 @@ const Sleep = () => {
             </p>
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small" onClick={clickHandler3}>Learn More</Button>
+          <CardActions style={{alignContent: 'center', margin: 'auto', width: 'fit-content'}}>
+            <Button size="small" style={{backgroundColor: 'lavenderblush', fontWeight: 'bold'}}>Share</Button>
+            <Button size="small" onClick={clickHandler1} style={{backgroundColor: 'lavenderblush', fontWeight: 'bold'}}>Learn More</Button>
           </CardActions>
         </Card>
 
         {/* Better Sleep */}
-        <Card sx={{ width: '50%' }}>
+        <Card sx={{ width: '50%', marginRight: '1rem', backdropFilter: 'blur(8px)', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '20px' }}>
           <CardMedia
             sx={{ height: 140 }}
             image="https://hips.hearstapps.com/hmg-prod/images/woman-falls-asleep-and-counts-sheep-insomnia-royalty-free-illustration-1675196187.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*"
@@ -125,9 +126,9 @@ const Sleep = () => {
             </p>
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small" onClick={clickHandler4}>Learn More</Button>
+          <CardActions style={{alignContent: 'center', margin: 'auto', width: 'fit-content'}}>
+            <Button size="small" style={{backgroundColor: 'lavenderblush', fontWeight: 'bold'}}>Share</Button>
+            <Button size="small" onClick={clickHandler1} style={{backgroundColor: 'lavenderblush', fontWeight: 'bold'}}>Learn More</Button>
           </CardActions>
         </Card>
       
