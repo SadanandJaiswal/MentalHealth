@@ -12,7 +12,7 @@ function Signup() {
 		password: "",
 	  });
 
-	const { name, email, password } = user;
+	// const { name, email, password } = user;
 
 	const googleAuth = () => {
 		window.open(

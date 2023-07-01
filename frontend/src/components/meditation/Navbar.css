@@ -45,9 +45,9 @@
 }
 
 .card {
-  max-width: 400px;
-  margin: 0 auto 20px;
-  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  /* max-width: 400px;
+  margin: 0 auto 20px; */
+  /* background-image: linear-gradient(to right, #8e2de2, #4a00e0); */
   /* background: rgb(2,0,36);
   background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 28%, rgba(5,92,176,1) 40%, rgba(0,212,255,1) 55%, rgba(6,77,166,1) 75%);
   background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 28%, rgba(5,92,176,1) 40%, rgba(0,212,255,1) 55%, rgba(6,77,166,1) 75%);
@@ -59,9 +59,9 @@
   /* background-image: repeating-linear-gradient(135deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px, transparent 10px, transparent 11px),
     repeating-linear-gradient(22.5deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px, transparent 10px, transparent 11px),
     linear-gradient(90deg, hsl(194,74%,56%), hsl(266,74%,56%), hsl(338,74%,56%), hsl(50,74%,56%), hsl(122,74%,56%)); */
-  border-radius: 10px;
+  /* border-radius: 10px;
   box-shadow: 0 2px 4px rgba(162, 5, 5, 0.1);
-  padding: 20px;
+  padding: 20px; */
 }
 
 
@@ -198,6 +198,11 @@
   padding: 20px;
 }
 
+.card{
+  background: transparent;
+  backdrop-filter: blur(1.8rem);
+}
+
 .title {
   font-size: 24px;
   margin-bottom: 10px;
@@ -222,11 +227,11 @@
   margin-bottom: 20px;
 }
 
-.row {
+/* .row {
   display: flex;
   flex-wrap: wrap;
   margin: -10px;
-}
+} */
 
 .column {
   flex: 1 1 50%;
@@ -323,13 +328,13 @@ li {
   gap: 20px;
 }
 
-.card {
+/* .card {
   position: relative;
   width: 300px;
   height: 200px;
   overflow: hidden;
   border-radius: 4px;
-}
+} */
 
 .video-container {
   position: relative;
@@ -445,18 +450,18 @@ li {
   animation: pulse 5s infinite;
 }
 
-.card:hover {
+/* .card:hover {
   animation: shake 10s linear;
-}
+} */
 
-.card {
+/* .card {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .card-link {
   display: block;
@@ -480,10 +485,10 @@ li {
   margin-bottom: 0.5rem;
 }
 
-.card-image {
+/* .card-image {
   width: 100%;
   height: auto;
-}
+} */
 
 @media (min-width: 320px) {
   .card {
@@ -497,13 +502,13 @@ li {
   }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .card {
     width: 320px;
   }
-}
+} */
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .card {
     width: 352px;
   }
@@ -519,4 +524,4 @@ li {
   .card {
     width: 100vw;
   }
-}
+} */

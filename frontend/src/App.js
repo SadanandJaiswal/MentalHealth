@@ -1,25 +1,26 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-// import About from "./pages/About";
+import About from "./pages/About";
 import Meditaion from "./pages/Meditaion";
 import Music from "./pages/Music";
 import Profile from "./pages/Profile";
 import Sleep from "./pages/Sleep";
-import Affirmation from "./pages/Affirmation";
+// import Affirmation from "./pages/Affirmation";
 import Sidebar from "./components/Sidebar";
 import MentalDisorder from './pages/MentalDisorder';
 import Login from "./pages/Login/index";
 import Register from "./pages/Signup/index";
-import MeditationDetails from "./components/meditation/meditationDetatil";
 
-import music1 from "./components/songs/yt1s.com - Relaxing Sounds.mp3"
+
+// import music1 from "./components/songs/yt1s.com - Relaxing Sounds.mp3"
 import Introduction from "./components/sleepComp/Introduction";
 import SleepBasics from "./components/sleepComp/SleepBasics";
 import Disorders from "./components/sleepComp/Disorders";
 import BetterSleep from "./components/sleepComp/BetterSleep";
 import Disorder from "./pages/Disorder";
 import Quotes from "./pages/Quotes";
+import MeditationDetails from './components/meditation/meditationDetatil'
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         <Sidebar>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/about" element={<About />} />
           <Route path="/meditation" element={<Meditaion />} />
           <Route path="/meditation/:id" element={<MeditationDetails/>} />
           <Route path="/music" element={<Music />} />

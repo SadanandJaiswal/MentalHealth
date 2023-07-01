@@ -139,7 +139,7 @@ const AudioPlayer = () => {
         <div className="music" id="music" style={{width:"100%"}}>
           {(!playAllBtn && !isPlaying)? 
           <div className="playAll">
-            <button onClick={togglePlayAll}>PlayAll</button>
+            <button onClick={togglePlayAll} className="button-33">PlayAll</button>
           </div>
           :
           <div className="music-controls">
