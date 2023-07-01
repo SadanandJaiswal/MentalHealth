@@ -1,20 +1,18 @@
+import React from 'react';
 
+const Quotesitem = ({ imageUrl, author, category, date }) => {
+  return (
+    <div className="my-card"style={{ padding: '8px' }}>
+      <div className="card">
+        <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{ left: '90%', zIndex: 1 }}>
+          {author}
+        </span>
+        <img src={imageUrl} id="thumbnail" className="card-img-top" alt=".." style={{ width: '100%', height: '150px', padding: '8px' }} />
+        {/* Add spacing below the image */}
+        <div className="mt-2"></div>
+      </div>
+    </div>
+  );
+};
 
-import React from 'react'
-
-const Quotesitem = ({imageUrl,author,category,date}) => {
-    return (
-                <div className="my-3">
-                <div className="card">
-                <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left:'90%',zIndex:1}}>{author}
-              </span>
-            <img src={imageUrl} class="card-img-top" alt="..."/>
-            
-                <p className="card-text"><small className='text-danger'>By {!author?"Unknown": author} on {new Date(date).toGMTString()}</small></p>
-                <p>{category}</p>
-                </div>
-              </div>
-        )
-}
-
-export default Quotesitem
+export default Quotesitem;
