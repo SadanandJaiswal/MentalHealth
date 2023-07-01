@@ -1,12 +1,12 @@
 import React from 'react';
 // import axios from 'axios';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 
 
 const Home = () => {
 
-  const [tiralData,setData] = useState(0);
+  // const [tiralData,setData] = useState(0);
 
   // axios.get('/trialData')
   //   .then(response => {
