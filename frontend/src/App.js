@@ -38,11 +38,11 @@ function App() {
           <Route path='/MentalDisorder' element={<MentalDisorder/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/signup' element={<Register/>}/>
-          <Route path="*" element={<h1>Not Found</h1>} />
           <Route path="/sleep/intro" element={<Introduction />} />
           <Route path="/sleep/basics" element={<SleepBasics />} />
           <Route path="/sleep/disorder" element={<Disorders />} />
           <Route path="/sleep/tips" element={<BetterSleep />} />
+          <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
         </Sidebar>
       </Router>
