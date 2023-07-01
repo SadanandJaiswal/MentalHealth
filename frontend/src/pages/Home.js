@@ -29,6 +29,12 @@ const Home = () => {
 
   return (
     <div>
+      <div className="btn-33">
+       
+      <Link to="/login">
+                <button className="fixed-button button-33" style={{fontSize:"13px"}} >LOGIN/SIGNUP</button>
+                </Link>
+      </div>
       <h1> Home </h1>
       <h2> Meditation </h2>
       <div className="medDiv">

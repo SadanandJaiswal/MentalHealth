@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Meditaion from "./pages/Meditaion";
@@ -23,12 +24,14 @@ import Quotes from "./pages/Quotes";
 import MeditationDetails from './components/meditation/meditationDetatil'
 
 function App() {
+
+  const [toggle,setToggle] = useState(false);
+
+
+
   return (
     <>
-      <div className="btn-33">
-                <button className="fixed-button button-33" style={{fontSize:"13px"}}>LOGIN/SIGNUP</button>
-                <p> </p>
-      </div>
+
       <Router>
         <Sidebar>
         <Routes>
