@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); */
+
+
+
+body{
+    background-image: url('https://tse4.mm.bing.net/th?id=OIP.pMbaUypN-gfPjxsY6R0gLAHaFj&pid=Api&P=0&h=180');
+    background-image: url('https://tse1.mm.bing.net/th?id=OIP.1YM53mG10H_U25iPjop83QHaEo&pid=Api&P=0&h=180');
+    background: rgb(0,212,255);
+  
+    /* gradient background*/
+    background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(11,3,45,1) 100%);    
+    
+    /* photo background */
+    background-image: url(https://images.unsplash.com/photo-1619204715997-1367fe5812f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1889&q=80);
+    background-size: cover;
+    background-position: center;  
+  }
+
+  /* *{
+    transition: 1.5s ease-in;
+  } */
+
+  h1{
+    font-family: 'Righteous', sans-serif;
+    color: rgba(255,255,255,0.98);
+    letter-spacing: 1.5px;
+  }
+
+.disorderCard {
+    border: 0px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 20px;
+    flex-grow: 1;
+    margin: 20px 0px;
+    row-gap: 40px;
+  }
+  
+  .disorderCard .card {
+    border: 0px solid red;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px; /* Set the initial size */
+    flex-grow: 1;
+    padding: 10px;
+    width: 260px;
+    /* background-image: url('https://tse4.mm.bing.net/th?id=OIP.pMbaUypN-gfPjxsY6R0gLAHaFj&pid=Api&P=0&h=180'); */
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.25);
+    filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+    transition: clip-path 0.3s ease;
+    border-radius: 20px;
+    transition: .5s;
+  }
+
+
+
+  .img{
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  img{
+    width: 100%;
+    transition: .5s;
+  }
+
+  img:hover{
+    scale: 1.1;
+  }
+  
+
+.card .cardTitle{
+    text-align: center;
+    margin: 10px 0px;
+    font-family: 'Righteous', sans-serif;
+    color: rgba(255,255,255,0.98);
+    letter-spacing: 1.5px;
+}
+
+.card .cardContent{
+    margin: 10px 0px;
+    color: #fff;
+    /* font-family: 'Lato', sans-serif; */
+}
+
+.cardContent::first-letter{
+    font-size: 24px;
+}
+
+.card .readMore{
+    border:0px solid red;
+    position: relative;
+    margin: 10px 0px;
+    font-size: 16px;
+    padding: 7px;
+    border-radius: 14px;
+    transition: scale .2s;
+    cursor: pointer;
+    /* bottom: 10px; */
+}
+
+.readMore:hover{
+    scale: .99;
+}
+
+
+.leavingNote{
+    /* position: absolute; */
+    bottom: 20px;
+    /* width: 100vw; */
+    border: 0px solid red;
+}
