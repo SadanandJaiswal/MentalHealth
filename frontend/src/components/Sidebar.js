@@ -98,6 +98,8 @@ const Sidebar = ({ children }) => {
         }
     }
 
+    const color = ["blue","red","yellow","green","pink","blue","purple","red","yellow"]
+
   return (
     <div className='main-container'>
         <motion.div animate={{ width: isOpen ? '200px' : '36px', transition: {
@@ -136,9 +138,9 @@ const Sidebar = ({ children }) => {
                 </AnimatePresence>
             </div>
             <section className='routes'>
-                {routes.map((route) => (
+                {routes.map((route,index) => (
                     <NavLink activeClassName="active" to={route.path} key={route.name} className='link'>
-                        <div className='icon'>
+                        <div className='icon' style={{backgroundImage: `linear-gradient(to bottom, ${color[index]}, white)`}}>
                             {route.icon}
                         </div>
                         <AnimatePresence>

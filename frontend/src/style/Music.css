@@ -11,7 +11,7 @@
     /* background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGNjNTA5YW54NGt6Z2ZnZW55OW9pZ3VtcGNhYXdobXhnZm1oaDdsaiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/b29IZK1dP4aWs/giphy.gif'); */
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
+    /* background-position: right; */
     padding: 0px;
     margin: 0px;
   }
@@ -91,7 +91,9 @@
     border-left: 5px solid darkmagenta;
     padding: 5px 10px;
     /* background-color: rgb(45, 51, 89); */
-    background-color: #dd96cf;
+    /* background-color: white; */
+    background: transparent;
+    backdrop-filter: blur(1.8rem);
     padding-right: 15px;
   }
   

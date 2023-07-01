@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
+// import './Music.css';
+import Navbar from '../components/meditation/navbar';
+import MeditationCard from '../components/meditation/meditationcard';
 
-const Meditaion = () => {
+
+const Meditation = () => {
   return (
     <div>
-      <h1> Mediation </h1>
-    </div>
-  )
-}
 
-export default Meditaion
+      <div className="timer-container">
+ <Navbar></Navbar>
+      </div>
+      <div className="meditation-container">
+       <MeditationCard></MeditationCard>
+      </div>
+    </div>
+  );
+};
+
+export default Meditation;

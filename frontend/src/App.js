@@ -6,20 +6,21 @@ import Meditaion from "./pages/Meditaion";
 import Music from "./pages/Music";
 import Profile from "./pages/Profile";
 import Sleep from "./pages/Sleep";
-import Affirmation from "./pages/Affirmation";
+// import Affirmation from "./pages/Affirmation";
 import Sidebar from "./components/Sidebar";
 import MentalDisorder from './pages/MentalDisorder';
 import Login from "./pages/Login/index";
 import Register from "./pages/Signup/index";
 
 
-import music1 from "./components/songs/yt1s.com - Relaxing Sounds.mp3"
+// import music1 from "./components/songs/yt1s.com - Relaxing Sounds.mp3"
 import Introduction from "./components/sleepComp/Introduction";
 import SleepBasics from "./components/sleepComp/SleepBasics";
 import Disorders from "./components/sleepComp/Disorders";
 import BetterSleep from "./components/sleepComp/BetterSleep";
 import Disorder from "./pages/Disorder";
 import Quotes from "./pages/Quotes";
+import MeditationDetails from './components/meditation/meditationDetatil'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/meditation" element={<Meditaion />} />
+          <Route path="/meditation/:id" element={<MeditationDetails/>} />
           <Route path="/music" element={<Music />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/sleep" element={<Sleep />} />
@@ -38,11 +40,11 @@ function App() {
           <Route path='/MentalDisorder' element={<MentalDisorder/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/signup' element={<Register/>}/>
-          <Route path="*" element={<h1>Not Found</h1>} />
           <Route path="/sleep/intro" element={<Introduction />} />
           <Route path="/sleep/basics" element={<SleepBasics />} />
           <Route path="/sleep/disorder" element={<Disorders />} />
           <Route path="/sleep/tips" element={<BetterSleep />} />
+          <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
         </Sidebar>
       </Router>
