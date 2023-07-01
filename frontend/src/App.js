@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,6 +12,8 @@ import MentalDisorder from './pages/MentalDisorder';
 import Login from "./pages/Login/index";
 import Register from "./pages/Signup/index";
 
+// Spinner :
+import { Watch } from 'react-loader-spinner';
 
 // import music1 from "./components/songs/yt1s.com - Relaxing Sounds.mp3"
 import Introduction from "./components/sleepComp/Introduction";
@@ -23,6 +25,15 @@ import Quotes from "./pages/Quotes";
 import MeditationDetails from './components/meditation/meditationDetatil'
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+  })
+
   return (
     <>
       <Router>
