@@ -1,9 +1,10 @@
 import React from 'react'
+import Quotes from './Quotes'
 
 const Affirmation = () => {
   return (
     <div>
-      <h1> Affirmation </h1>
+      <Quotes/>   
     </div>
   )
 }
