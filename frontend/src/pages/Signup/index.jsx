@@ -35,10 +35,10 @@ function Signup() {
 			if(response.data)
 			{
 				axios.get("/me").then(res=>{
-					Cookies.set('userName', res.data.user.name, { expires: 10*86400*1000 }); // Expires in 7 days
-					Cookies.set('userEmail',res.data.user.email, { expires: 10*86400*1000 });
-					Cookies.set('userData', res.data ,  { expires: 10*86400*1000 });
-					if(Cookies.get('userName'))
+					// Cookies.set('userName', res.data.user.name, { expires: 10*86400*1000 }); // Expires in 7 days
+					// Cookies.set('userEmail',res.data.user.email, { expires: 10*86400*1000 });
+					Cookies.set('userData', JSON.stringify(res.data) ,  { expires: 10*86400*1000 });
+					if(Cookies.get('userData'))
 					{
 					  navigate('/');
 					}
@@ -53,24 +53,6 @@ function Signup() {
 		})
 	}
 
-	// const submitForm = async (event)=>{
-	// 	event.preventDefault(); // Prevent the default form submission
-  	// 	const form = event.target;
-	// 	const formData = new FormData(form);
-
-	// 	formData.set("name", name);
-	// 	formData.set("email", email);
-	// 	formData.set("password", password);
-
-	// 	try{
-	// 		const config = { headers: { "Content-Type": "multipart/form-data" } };
-	// 		await axios.post(`/register`, formData);
-	// 		// console.log(result.response.data);
-	// 	}
-	// 	catch(e){
-	// 		console.log('error is ',e);
-	// 	}
-	// }
 
 	const registerDataChange = (e) =>{
 		setUser({ ...user, [e.target.name]: e.target.value });

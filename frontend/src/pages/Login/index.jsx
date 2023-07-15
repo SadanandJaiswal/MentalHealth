@@ -45,15 +45,15 @@ function Login() {
 		if(response.data)
 		{
       axios.get("/me").then(res=>{
-        Cookies.set('userName', res.data.user.name, { expires: 10*86400*1000 }); // Expires in 7 days
-        Cookies.set('userEmail',res.data.user.email, { expires: 10*86400*1000 });
-        Cookies.set('userData', res.data ,  { expires: 10*86400*1000 });
-        if(Cookies.get('userName'))
+        // Cookies.set('userName', res.data.user.name, { expires: 10*86400*1000 }); // Expires in 7 days
+        // Cookies.set('userEmail',res.data.user.email, { expires: 10*86400*1000 });
+        Cookies.set('userData', JSON.stringify(res.data) ,  { expires: 10*86400*1000 });
+        console.log('user data is')
+        console.log(res.data)
+        if(Cookies.get('userData'))
         {
           navigate('/');
         }
-
-        // setUser(res.data);
       })
       .catch((err)=>{
         console.log('unable to fetch user having error ',err);

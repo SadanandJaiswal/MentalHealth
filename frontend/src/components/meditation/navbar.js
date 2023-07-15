@@ -1,50 +1,46 @@
-import React from 'react';
-import './Navbar.css'; // Import the CSS file for the component
+import React, { useState } from "react";
+import { meditationTypes } from "./meditationData";
+import "./Navbar.css";
+function Navbar() {
+  const categories = [...new Set(meditationTypes.map((meditation) => meditation.category))];
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
-const Navbar = () => {
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <button className="nav-button">Sleep</button>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <button className="nav-button">Anxiety</button>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <button className="nav-button">Beginners</button>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <button className="nav-button">Stress</button>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <button className="nav-button">Work</button>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <button className="nav-button">Self-Care</button>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <button className="nav-button">With Soundscapes</button>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <nav>
+      <ul>
+        {categories.map((category) => (
+          <button className="button-85">
+          <li
+            key={category}
+            className={selectedCategory === category ? "active" : ""}
+            onClick={() => handleCategoryClick(category)}
+          >
+            {category}
+          </li></button>
+        ))}
+      </ul>
+      {selectedCategory && (
+        <div>
+          <h2>{selectedCategory}</h2>
+          <ul>
+            {meditationTypes
+              .filter((meditation) => meditation.category === selectedCategory)
+              .map((meditation) => (
+                <li key={meditation.id}>
+                  <h3>{meditation.name}</h3>
+                  <p>{meditation.description}</p>
+                  {/* Render other information for each meditation type */}
+                </li>
+              ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
-};
+}
 
 export default Navbar;

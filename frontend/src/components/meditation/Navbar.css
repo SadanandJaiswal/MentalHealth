@@ -53,31 +53,23 @@
 
 
 
-
-
-.card-heading {
-  font-size: 12px;
-  color: #ff4081;
-  text-align: center;
-}
-
-.card-image {
-  display: block;
-  margin: 20px auto;
+.video-container-card {
+  position: relative;
   width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
 }
 
-.card-content {
-  text-align: center;
-  margin-bottom: 2px;
-  font-size: 8px; /* Decrease font size for card content */
-  font-family: Arial, sans-serif;
-   /* Use suitable font */
+.video-container-card iframe,
+.video-container-card video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
+
+
 
 .step-list {
   list-style: none;
@@ -161,29 +153,6 @@ width: 100%;
   margin-top: 8px;
 }
 
-.button-85 {
-  background-color: #c2fbd7;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 3px 2px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 5x;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-85:hover {
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
-}
 /* MeditationDetails.css */
 .meditation-details {
   max-width: 800px;
@@ -191,10 +160,6 @@ width: 100%;
   padding: 20px;
 }
 
-.card{
-  background: transparent;
-  backdrop-filter: blur(1.8rem);
-}
 
 
 
@@ -257,6 +222,7 @@ width: 100%;
 
 
 .card {
+  color: #10c6db;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -277,12 +243,9 @@ width: 100%;
 }
 
 .name:hover {
-  color: #000;
+  color: #b31717;
 }
 
-.card-link {
-  text-decoration: none;
-}
 
 .card:hover {
   transform: scale(0.9, 0.9);
@@ -350,6 +313,50 @@ width: 100%;
 <!-- HTML !-->
 <button class="button-73" role="button">Button 73</button> */
 
+
+/* button steps */
+.button-li {
+  border-radius: 50px;
+  border-style: initial;
+  border-width: 0;
+  box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 3px 4px 0;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  height: 50px;
+  padding: 0 25px;
+}
+
+.demo-btn {
+  background-color: #c2fbd7;
+  color: green;
+  cursor: pointer;
+  display: none;
+  transition: all 200ms;
+}
+
+@media screen and (min-width: 1024px) {
+  .demo-btn {
+    display: inline-block;
+  }
+}
+
+.button-li svg {
+  margin-right: .5em;
+}
+
+.demo-btn:hover {
+  background-color: #afe6c3;
+  transform: scale(1.05);
+}
+
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+
+svg:not(:root).svg-inline--fa {
+  overflow: visible;
+}
+
 /* CSS */
 .button-li {
   appearance: none;
@@ -362,7 +369,7 @@ width: 100%;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system,sans-serif;
-  font-size:0.5px;
+  font-size:100%;
   font-weight: 50;
   letter-spacing: -.24px;
   margin: 0;
@@ -396,6 +403,140 @@ width: 100%;
   }
 }
 
+.button-85 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 4px;
+}
+
+
+/* CSS */
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}<!-- HTML !-->
+<button class="button-64" role="button"><span class="text">Button 64</span></button>
+
+/* CSS */
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+.button-85:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
 /* Style the video navbar-container */
 .video-container {
   display: flex;
@@ -469,23 +610,122 @@ width: 100%;
   margin-top: 10px;
   text-align: center;
 }
+/* ".inherited-styles-for-exported-element" is a generated class for the inherited styles of the exported element, feel free to rename it. */
+
+.inherited-styles-for-exported-element {
+  color: #333;
+  font-family: CerebriSans-Regular, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  font-size: 100%;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 2px 0;
+  box-sizing: border-box;
+  transition: all 350ms;
+}
+
+.card-example {
+  display: inline-block;
+  margin: 0;
+  max-width: 300px;
+  padding: 8px;
+  text-align: left;
+}
+
+.card-body {
+  font-size: .9em;
+  padding: 0 .8em;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: .8em;
+}
+
+.card-desc {
+  color: #999;
+  margin-top: 0;
+}
+
+.card-image {
+  border-radius: 7px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+.card-image img {
+  height: auto;
+  overflow: hidden;
+  transition: all 200ms;
+  width: 100%;
+}
+
+.components {
+  -webkit-box-flex: 1;
+  align-self: center;
+  flex: 1;
+  text-align: center;
+}
+
+.card-example:hover {
+  box-shadow: rgba(0, 12, 32, .04) 0 0 1px 0, rgba(0, 12, 32, .04) 0 10px 16px 0;
+}
+
+.card-desc .fa-arrow-right {
+  float: right;
+}
+
+.svg-inline--fa.fa-w-14 {
+  width: .875em;
+}
+
+svg:not(:root).svg-inline--fa {
+  overflow: visible;
+}
+
+.card-example:hover .card-image img {
+  opacity: .9;
+}
 
 .card-link {
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
   display: block;
   /* margin-top: 10px; */
   text-align: center;
-  font-size:12px;
+  align-items: center;
+  font-size:16px;
   /* padding: 0.5rem 1rem; */
-  background-color: lightgray;
+  background-color: blur;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-  color: #000;
+  font-weight: 300;
+  color: #14cc1d;
 }
 
 .card-link:hover {
-  background-color: darkgray;
+  background-color:blur;
 }
 
 @keyframes fade-in {
@@ -580,11 +820,7 @@ width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 } */
 
-.card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
+
 /* 
 .card-content {
   padding: 1rem;
@@ -602,6 +838,10 @@ width: 100%;
   margin-bottom: 0.5rem;
 }
 
+.card{
+  background: transparent;
+  backdrop-filter: blur(1.8rem);
+}
 /* .card-image {
   width: 100%;
   height: auto;
@@ -646,7 +886,7 @@ width: 100%;
 
 /* Blurred background for benefits and problems sections */
 .blur {
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  background-color: rgba(228, 22, 22, 0.5); /* Adjust the opacity as needed */
   list-style-type: none;
   margin: 0;
   padding: 0; margin-bottom: 10px; text-align: center;

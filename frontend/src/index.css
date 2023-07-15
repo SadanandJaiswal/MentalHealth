@@ -7,7 +7,8 @@ font-family: 'Montserrat', sans-serif;
 }
 
 body{
-   background-image: url("https://cdn.pixabay.com/photo/2015/10/09/00/55/lotus-978659_1280.jpg");
+   /* background-image: url("https://cdn.pixabay.com/photo/2015/10/09/00/55/lotus-978659_1280.jpg"); */
+   background-color:lavenderblush;
    background-position: fixed; 
 }
 
@@ -31,7 +32,8 @@ main {
   /* background: rgb(0, 7, 61); */
   background: black;
   color: white;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: 100vh;
 }
 /* 
 .sidebar:hover{
@@ -319,10 +321,6 @@ body::-webkit-scrollbar-thumb{
 font-family: 'Montserrat', sans-serif;
 }
 
-body{
-   background-image: url("https://cdn.pixabay.com/photo/2015/10/09/00/55/lotus-978659_1280.jpg");
-   background-position: fixed; 
-}
 
 a {
   text-decoration: none;
@@ -330,6 +328,8 @@ a {
 
 main {
   padding: 20px;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .main-container {
@@ -602,12 +602,12 @@ main {
   font-size: 1.3rem;
   color: black;
 }
-body::-webkit-scrollbar{
+main::-webkit-scrollbar{
   width: 2px;
   background-color: transparent;
 }
 
-body::-webkit-scrollbar-thumb{
+main::-webkit-scrollbar-thumb{
   width: 2px;
   background-color: blue;
 }

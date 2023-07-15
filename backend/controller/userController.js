@@ -54,6 +54,10 @@ exports.logout = async(req,res,next)=>{
         expires:new Date(Date.now()),
         httpOnly:true
     })
+    res.cookie('userData',null,{
+        expires:new Date(Date.now()),
+        httpOnly:true
+    })
     console.log('user logged out successfully')
     res.status(201).json({
         success:true,
