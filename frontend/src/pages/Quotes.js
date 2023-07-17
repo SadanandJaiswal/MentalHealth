@@ -25,16 +25,16 @@ const Quotes = () => {
 
   return (
     <>
-      <div className="my-3">
-        <h1>Quotes!!</h1>
-        <div className="row">
+      <div className='agko'>
+        <h1 style={{color:"black"}}>Quotes!!</h1>
+        <div className="quote-container">
           {loading ? (
             <div>Loading...</div>
           ) : error ? (
             <div>Error: {error}</div>
           ) : (
             quotes.map((element) => (
-              <div className="col-md-4" key={element.id}>
+              <div className="quote-item" key={element.id}>
                 <Quotesitem
                   imageUrl={element.urlToImage}
                   author={element.author}
