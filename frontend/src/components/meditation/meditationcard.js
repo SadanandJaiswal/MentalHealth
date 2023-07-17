@@ -61,7 +61,7 @@ const MeditationCard = () => {
         </div>
       </div>
       <div className="main mt-4">
-        <div className="row row-lg-4">
+        <div className="mrow row-lg-4">
           {meditationTypes
             .filter((meditation) =>
               selectedCategory ? meditation.category === selectedCategory : true
@@ -70,7 +70,7 @@ const MeditationCard = () => {
               <div className="col-md-4 col-lg-4 col-sm-4" key={meditation.id}>
                 <Link to={`/meditation/${meditation.id}`} className="card-link">
                   <div className="card">
-                    <div className="video-container-card">
+                  <div className="video-container-card">
                       <ReactPlayer
                         url={meditation.videoUrl}
                         controls={true}

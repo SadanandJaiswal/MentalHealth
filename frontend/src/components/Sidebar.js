@@ -115,6 +115,7 @@ const Sidebar = ({ children }) => {
                         animate="show"
                         exit="hidden"
                         className='logo'
+                        
                     > 
                         jevanBandhu 
                     </motion.h1>}
