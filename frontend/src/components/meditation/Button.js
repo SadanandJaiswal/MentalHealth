@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { meditationTypes } from "./meditationData";
 
 const Bton = ({ steps }) => {
-  const [buttonCount, setButtonCount] = useState(steps.length);
-  const [currentButtonIndex, setCurrentButtonIndex] = useState(0);
+  const [buttonCount, setButtonCount] = useState(0);
+  const [currentButtonIndex, setCurrentButtonIndex] = useState(-1);
   const [isAutoLoopActive, setIsAutoLoopActive] = useState(false);
 
   useEffect(() => {
@@ -11,15 +10,22 @@ const Bton = ({ steps }) => {
     if (isAutoLoopActive) {
       timer = setInterval(() => {
         setCurrentButtonIndex((prevIndex) => (prevIndex + 1) % buttonCount);
-      }, 5000);
+      }, 2000);
     }
 
     return () => clearInterval(timer);
   }, [isAutoLoopActive, buttonCount]);
-
   const handleStartClick = () => {
     setIsAutoLoopActive((prevAutoLoop) => !prevAutoLoop);
+    if (!isAutoLoopActive) {
+      setButtonCount(1);
+      setCurrentButtonIndex(0);
+    } else {
+      setButtonCount(0);
+      setCurrentButtonIndex(-1);
+    }
   };
+  
 
   useEffect(() => {
     let newButtonTimer;
@@ -32,7 +38,7 @@ const Bton = ({ steps }) => {
           setCurrentButtonIndex((prevIndex) => (prevIndex + 1) % steps.length);
           setButtonCount((prevCount) => prevCount + 1);
         }
-      }, 5000);
+      }, 3000);
     }
 
     return () => clearTimeout(newButtonTimer);
@@ -40,25 +46,24 @@ const Bton = ({ steps }) => {
 
   return (
     <>
-    <div className="button">
-        <button className={` ${isAutoLoopActive ? 'active button-li ' : ' button-29'}`} onClick={handleStartClick}>
-          {isAutoLoopActive ? 'Stop' : 'Steps TO Show'}
+      <div className="button">
+        <button className={`${isAutoLoopActive ? 'active button-29 ' : ' button-29'}`} onClick={handleStartClick}>
+          {isAutoLoopActive ? 'Stop' : 'Start'}
         </button>
-      </div> 
+      </div>
       <div className="btn-container">
-      {[...Array(buttonCount)].map((_, index) => (
-         <div key={index} className="mb-2">
-          <button
-            key={index}
-            className={`btn ${index === currentButtonIndex ? 'highlight' : ''} ${index === buttonCount - 1 ? 'button-85' : 'button-li'}`}
-          >
-            {steps[index]}
-            {index === buttonCount - 1 && <span className="toggle-btn"></span>}
-          </button>
+        {[...Array(buttonCount)].map((_, index) => (
+          <div key={index} className="mb-2">
+            <button
+              key={index} style={{ width: "100%", margin: "10px", padding: "5px" }}
+              className={`btn ${index === currentButtonIndex ? 'highlight' : ''} ${index === buttonCount - 1 ? 'button-85' : 'button-li'}`}
+            >
+              {steps[index]}
+              {index === buttonCount - 1 && <span className="toggle-btn"></span>}
+            </button>
           </div>
         ))}
       </div>
-      
     </>
   );
 };

@@ -58,10 +58,9 @@ const MeditationDetails = () => {
 
   return (
     <>
-    
       <div className="meditation-details">
         <div className="row">
-          <div className="col-md-4 title">{meditation.name}</div>
+          <div style={{ fontFamily: "Roboto Slab ",color:"black" }} className="col-md-4 title">{meditation.name}</div>
           <div className="col-md-4 offset-md-4 timer-container">
             <Timer />
           </div>
@@ -80,56 +79,81 @@ const MeditationDetails = () => {
             </div>
           </div>
         </div>
-        <div className="row blur">
-          <div className="col-md-6">
-            <div className="section steps-section">
-            <Bton steps={meditation.steps} />
+      </div>
+
+      <div className="card-1 detail d-flex justify-content-center">
+        <div className="d-flex">
+          <div
+            className="card  justify-content-center"
+            style={{ width: "100%", margin: "10px", padding: "5px" }}
+          >
+            <div className="card-body text-center">
+              <div className="section steps-section">
+                <Bton steps={meditation.steps} />
+              </div>
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="section">
-              <button
-                className={`btn btn-light ${showBenefits ? "focused" : ""}`}
-                onClick={toggleBenefits}
-              >
-                Benefits of Meditation
-                {showBenefits ? "Hide Benefits" : "Show Benefits"}
-              </button>
-              {showBenefits && (
-                <div className="navbar-items">
-                  <ul className="benefits-list">
+
+          <div
+            className="card justify-content-center"
+            style={{ width: "100%", margin: "10px", padding: "5px" }}
+          >
+            <div className="card-body d-flex flex-column align-items-center">
+              <div className="head">
+                <button
+                  className={`btn  button-29 ${showBenefits ? "focused" : "  button-29"}`}
+                  onClick={toggleBenefits}
+                >
+                  {showBenefits ? "Hide Benefits" : " Benefits"}
+                </button>
+              </div>
+              <div className="section">
+                {showBenefits && (
+                  <div className="benefits-list">
                     {benefits.map((benefit, index) => (
-                      <li className="benefit-item" key={index}>
-                        <button className="btn btn-sm button-li black">
-                          {benefit}
-                        </button>
-                      </li>
+                      <button
+                        className="btn btn-sm button-li black"
+                        key={index}
+                        style={{
+                          width: "100%",
+                          margin: "10px",
+                          padding: "5px",
+                        }}
+                      >
+                        {benefit}
+                      </button>
                     ))}
-                  </ul>
-                </div>
-              )}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="section">
-              <button
-                className={`btn btn-danger ${showProblems ? "focused" : ""}`}
-                onClick={toggleProblems}
-              >
-                Problems Meditation Can Help Overcome
-                {showProblems ? "Hide Problems" : "Show Problems"}
-              </button>
+
+          <div
+            className="card justify-content-center"
+            style={{ width: "100%", margin: "10px", padding: "5px" }}
+          >
+             <div className="card-body d-flex flex-column align-items-center">
+              <div className="head">
+                <button
+                  className={`btn  button-29 ${showProblems ? "focused" :  "button-29 "}`}
+                  onClick={toggleProblems}
+                  style={{ width: "100%", margin: "10px", padding: "5px" }}
+                >
+                  {showProblems ? "Hide Problems" : " Problems"}
+                </button>
+              </div>
               {showProblems && (
                 <div className="navbar-items">
-                  <ul className="problems-list">
-                    {problems.map((problem, index) => (
-                      <li className="problem-item" key={index}>
-                        <button className="btn btn-sm button-li black">
-                          {problem}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
+                  {problems.map((problem, index) => (
+                    <button
+                      className="btn btn-sm button-li black"
+                      key={index}
+                      style={{ width: "100%", margin: "10px", padding: "5px" }}
+                    >
+                      {problem}
+                    </button>
+                  ))}
                 </div>
               )}
             </div>
