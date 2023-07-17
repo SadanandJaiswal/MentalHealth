@@ -20,6 +20,14 @@ function ViewMoreLink({ to }) {
 
 function SliderComponent({ items, viewMorePath }) {
   const [startIndex, setStartIndex] = useState(0);
+import Meditation from './Meditaion';
+import SleepApi from '../api/SleepApi';
+import disorderApi from '../api/disorderApi';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+
+
+const Home = () => {
 
   const handleShiftLeft = () => {
     setStartIndex((prevIndex) => prevIndex - 1);

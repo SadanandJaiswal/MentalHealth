@@ -9,7 +9,6 @@ import Meditaion from "./pages/Meditaion";
 import Music from "./pages/Music";
 import Profile from "./pages/Profile";
 import Sleep from "./pages/Sleep";
-// import Affirmation from "./pages/Affirmation";
 import Sidebar from "./components/Sidebar";
 import MentalDisorder from './pages/MentalDisorder';
 import Login from "./pages/Login/index";
@@ -27,12 +26,7 @@ import Quotes from "./pages/Quotes";
 import MeditationDetails from './components/meditation/meditationDetatil'
 
 
-
 function App() {
-
-  
-
-
   return (
     <>
 

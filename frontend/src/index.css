@@ -18,6 +18,7 @@ body{
 background: #17FE51;
 background: linear-gradient(135deg, #17FE51, #6A4FEA);
    /* background-image: url("https://cdn.pixabay.com/photo/2015/10/09/00/55/lotus-978659_1280.jpg"); */
+   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoViEw1e10xKc_zDUDdHhpAozQgnRHRpB-Wm4PCyVAhOwl8lTOrBxcwoxc-eSKGvgRoqM&usqp=CAU');
    background-color:lavenderblush;
    background-position: fixed; 
 }

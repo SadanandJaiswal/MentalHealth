@@ -12,10 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use(cors());
 
-const user = require('./routes/userRoute')
+const routes = require('./routes/routes')
 
 
-app.use('/', user);
+app.use('/', routes);
 app.use(express.static(path.join(__dirname,"../frontend")));
 
 app.get('*',(req,res)=>{
