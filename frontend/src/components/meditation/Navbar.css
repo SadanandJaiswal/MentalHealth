@@ -196,11 +196,11 @@ width: 100%;
   max-width: 33.33%;
 } */
 
-.row {
+.mrow {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;
 }
 
 <<<<<<< HEAD

@@ -68,7 +68,7 @@ const Profile= () => {
       </div>
       <div className="social-links">
         <button>
-          <i id="bh"className="fab fa-facebook-f"></i>
+        <i id="bh"className="fab fa-facebook-f"></i>
         </button>
         <button>
           <i id="bh" className="fab fa-twitter"></i>

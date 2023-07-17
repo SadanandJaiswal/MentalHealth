@@ -1,97 +1,123 @@
-import React from 'react';
-import '../style/Home.css'
-// import axios from 'axios';
-// import { useState } from 'react';
-import MeditationApi from '../api/MeditationApi';
+import React, { useState } from "react";
 import ReactPlayer from "react-player";
-import Meditation from './Meditaion';
-import SleepApi from '../api/SleepApi';
-import disorderApi from '../api/disorderApi';
-import { Link } from 'react-router-dom';
+import "../style/Home.css";
+import { meditationTypes } from "../components/meditation/meditationData";
+import SleepApi from "../api/SleepApi";
+import disorderApi from "../api/disorderApi";
+import { Link } from "react-router-dom";
 
-const Home = () => {
+function ViewMoreLink({ to }) {
+  return (
+    <Link to={to}>
+      <div className="viewBTN">
+        <button className="viewBTN">
+          <div>View More</div>
+        </button>
+      </div>
+    </Link>
+  );
+}
 
-  // const [tiralData,setData] = useState(0);
+function SliderComponent({ items, viewMorePath }) {
+  const [startIndex, setStartIndex] = useState(0);
 
-  // axios.get('/trialData')
-  //   .then(response => {
-  //     const data = response.data;
-  //     setData(response.data);
-  //     // Process the data received from the backend
-  //     console.log(data);
-  //     // window.confirm(data);
-  //     console.log(tiralData)
-  //   })
-  //   .catch(error => {
-  //     // Handle any errors
-  //     console.error(error);
-  //   });
+  const handleShiftLeft = () => {
+    setStartIndex((prevIndex) => prevIndex - 1);
+  };
+
+  const handleShiftRight = () => {
+    setStartIndex((prevIndex) => prevIndex + 1);
+  };
+
+  const visibleItems = items.slice(startIndex, startIndex + 3);
 
   return (
-    <div>
-      <div className="btn-33">
-       
-      <Link to="/login">
-                <button className="fixed-button button-33" style={{fontSize:"13px"}} >LOGIN/SIGNUP</button>
-                </Link>
+    <>
+      <div className="d-flex justify-content-end">
+        <button
+          className="button-85"
+          onClick={handleShiftLeft}
+          disabled={startIndex === 0}
+        >
+          left
+        </button>
+        <button
+          className="button-85"
+          onClick={handleShiftRight}
+          disabled={startIndex + 3 >= items.length}
+        >
+          right
+        </button>
+        <ViewMoreLink to={viewMorePath} />
       </div>
-      <h1> Home </h1>
-      <h2> Meditation </h2>
-      <div className="medDiv">
-        {MeditationApi.map((meditation) => (
-          <div className="medCard">
-              <ReactPlayer
-                url={meditation.videoUrl}
-                controls={true}
-                light={true}
-                width="100%"
-                height="150px"
-              />
-              <h3> {meditation.name} </h3>
-              <p> Problems: {meditation.problems} </p>
-          </div>
-          )
-        )}
-        <Link to='/meditation'>
-          <div className="viewBTN">
-            <button className='viewBTN'> <div>View More</div> </button>
-          </div>
-        </Link>
+
+      <div className="main mt-4">
+        <div className="row">
+          {visibleItems.map((item) => (
+            <div className="col-md-4 col-lg-4 col-sm-4" key={item.name}>
+              <div
+                className="card"
+                style={{ boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px" }}
+              >
+                <div className="video-card">
+                  {item.videoUrl ? (
+                    <ReactPlayer
+                      url={item.videoUrl}
+                      controls={true}
+                      light={true}
+                      width="100%"
+                      height="150px"
+                    />
+                  ) : (
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="slider-image"
+                    />
+                  )}
+                </div>
+                <h3>{item.name}</h3>
+                {item.problems && (
+                  <p className="slider-problems">
+                    <b>Problems:</b> {item.problems}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <h2> Sleep </h2>
-      <div className="sleepDiv">
-        {SleepApi.map((sleep) => (
-          <div className="medCard">
-              <img src={sleep.image} />
-              <h3> {sleep.name} </h3>
-              <p> Problems: {sleep.content} </p>
-          </div>
-          )
-        )}
-        <Link to='/sleep'>
-          <div className="viewBTN">
-            <button className='viewBTN'> <div>View More</div> </button>
-          </div>
-        </Link>
-      </div>
-      <h2> Disorders </h2>
-      <div className="sleepDiv">
-        {disorderApi.map((disorder, i) => i<3 ? (
-          <div className="medCard">
-              <img src={disorder.imageUrl} />
-              <h3> {disorder.name} </h3>
-              <p> {disorder.description} </p>
-          </div>
-          ): null
-        )}
-        <Link to={`/MentalDisorder`}>
-          <div className="viewBTN">
-            <button className='viewBTN'> <div>View More</div> </button>
-          </div>
-        </Link>
-      </div>
-    </div>
-  )
+    </>
+  );
 }
+
+const Home = () => {
+  return (
+    <>
+      <div>
+        <div className="btn-33">
+          <Link to="/login">
+            <button
+              className="fixed-button button-33"
+              style={{ fontSize: "13px" }}
+            >
+              LOGIN/SIGNUP
+            </button>
+          </Link>
+        </div>
+
+        <h1>Home</h1>
+        <h2>Meditation</h2>
+        <SliderComponent items={meditationTypes} viewMorePath="/meditation" />
+
+        <h2>Sleep</h2>
+        <SliderComponent items={SleepApi} viewMorePath="/sleep" />
+
+        <h2>Disorders</h2>
+        <SliderComponent items={disorderApi} viewMorePath="/MentalDisorder" />
+      </div>
+    </>
+  );
+};
 
 export default Home;
