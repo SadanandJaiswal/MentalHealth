@@ -4,15 +4,15 @@ html {
     font-family: "DM Sans", sans-serif;
   }
 
-  body{
+  /* body{
 
-  }
+  } */
 
-  main{
-    padding: 0;
-    height: calc(100vh - 5px);
+  /* main{ */
+    /* padding: 0; */
+    /* height: calc(100vh - 1rem); */
     /* border: 2px solid red; */
-  }
+  /* } */
   
   .profile_container{
     display: flex;

@@ -24,12 +24,14 @@ background: rgb(238,174,202);
 background: #17FE51;
 background: linear-gradient(135deg, #17FE51, #6A4FEA); */
    /* background-image: url("https://cdn.pixabay.com/photo/2015/10/09/00/55/lotus-978659_1280.jpg"); */
-   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoViEw1e10xKc_zDUDdHhpAozQgnRHRpB-Wm4PCyVAhOwl8lTOrBxcwoxc-eSKGvgRoqM&usqp=CAU');
-   background-color:lavenderblush;
+   /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoViEw1e10xKc_zDUDdHhpAozQgnRHRpB-Wm4PCyVAhOwl8lTOrBxcwoxc-eSKGvgRoqM&usqp=CAU'); */
+   /* background-color:lavenderblush; */
    background-position: fixed; 
+   scrollbar-width:1px;
 }
 /* home mediation  */
-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+/* i'm commenting this as i don't know where it is used */
+/* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
 
 a {
   text-decoration: none;
@@ -297,13 +299,13 @@ main {
   font-size: 1.3rem;
   color: black;
 }
-body::-webkit-scrollbar{
-  width: 2px;
+main::-webkit-scrollbar{
+  width: 1px;
   background-color: transparent;
 }
 
-body::-webkit-scrollbar-thumb{
-  width: 2px;
+main::-webkit-scrollbar-thumb{
+  width: 1px;
   background-color: blue;
 }
 

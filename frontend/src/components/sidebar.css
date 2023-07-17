@@ -96,14 +96,14 @@
   margin-right: 10px;
 }
 
-input[type="text"] {
+/* input[type="text"] {
   background-color: transparent;
   border: none;
   outline: none;
   color: rgb(13, 122, 20);
   font-size: 14px;
   width: 0;
-}
+} */
 
 /* Animation Variants */
 

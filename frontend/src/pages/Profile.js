@@ -37,24 +37,29 @@ const Profile= () => {
 
 
     const updateProfile=()=>{
-      axios.put('/me/update ',{
-        name:updateData.updatedName,
-        email:updateData.updatedEmail
-      })
-      .then((response)=>{
-        if(response.data)
-        {
-          Cookies.set('userData', JSON.stringify(response.data) ,  { expires: 10*86400*1000 });
-          alert('Data Successfully Updated');
-          setToggleUpdate(!toggleUpdate);
-        }
-      })
-      .catch((e)=>{
-        alert('Error please check the updated fields');
-        console.log('error ',e);
-      })
+      if(updateData.updatedName || updateData.updatedEmail)
+      {
+        axios.put('/me/update ',{
+          name:updateData.updatedName,
+          email:updateData.updatedEmail
+        })
+        .then((response)=>{
+          if(response.data)
+          {
+            Cookies.set('userData', JSON.stringify(response.data) ,  { expires: 10*86400*1000 });
+            alert('Data Successfully Updated');
+            setToggleUpdate(!toggleUpdate);
+          }
+        })
+        .catch((e)=>{
+          alert('Error please check the updated fields');
+          console.log('error ',e);
+        })
+      }
+      else{
+        setToggleUpdate(!toggleUpdate);
+      }
       console.log(updateData);
-      // setToggleUpdate(!toggleUpdate);
     }
 
     const handelUPdateData = (e)=>{
