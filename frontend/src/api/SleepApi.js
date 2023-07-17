@@ -1,4 +1,5 @@
-const SleepApi = [
+const SleepApi = 
+[
     {
         id: 'one',
         name: "Introduction",
@@ -21,5 +22,25 @@ const SleepApi = [
         it is important to consult with a healthcare professional or a sleep specialist.`
     },
 ]
+
+// import axios from 'axios';
+
+// const sleepApiData = ()=>{
+//     axios.get('/sleepDetails')
+//     .then((response)=>{
+//       const data = response.data.data;
+//       console.log('sleep data')
+//       console.log(data);
+//       return data;
+//     })
+//     .catch((e)=>{
+//         console.log('there is error in fetchin data')
+//         console.log('error is ',e);
+//     })
+// }
+
+// const SleepApi = sleepApiData();
+
+
 
 export default SleepApi;

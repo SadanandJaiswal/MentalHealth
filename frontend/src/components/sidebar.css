@@ -1,0 +1,146 @@
+.main-container {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar {
+
+    background: radial-gradient(circle at right, #e66eb6, #499feb);
+
+  height: 100vh;
+  overflow: scroll;
+  position: relative;
+  z-index: 100;
+  transition: width 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  scrollbar-width: 0px;
+}
+
+.sidebar::-webkit-scrollbar{
+  width: 0px;
+}
+
+
+.top_section {
+  /* Existing styles */
+}
+
+.logo {
+  /* Existing styles */
+}
+
+.bars {
+  /* Existing styles */
+}
+
+.routes {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(7, 74, 42);
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-size: cover;
+  color: inherit; /* Inherit the color */
+  cursor: pointer; /* Set cursor as pointer */
+}
+
+.link_text {
+  display: none;
+}
+
+/* Animation Styles */
+/* Existing styles */
+
+/* Animation Variants */
+/* Existing styles */
+
+
+/* Animation Styles */
+
+.logo {
+  display: inline-block;
+}
+
+.link_text {
+  display: inline-block;
+}
+
+.search {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  margin-right: 10px;
+}
+
+/* input[type="text"] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgb(13, 122, 20);
+  font-size: 14px;
+  width: 0;
+} */
+
+/* Animation Variants */
+
+@keyframes showAnimation {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: auto;
+    opacity: 1;
+  }
+}
+
+@keyframes inputAnimation {
+  0% {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 140px;
+    padding: 5px 15px;
+    opacity: 1;
+  }
+}
+
+.showAnimation {
+  animation: showAnimation 0.2s ease forwards;
+}
+
+.inputAnimation {
+  animation: inputAnimation 0.2s ease forwards;
+}

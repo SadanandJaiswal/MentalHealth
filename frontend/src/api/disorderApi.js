@@ -1,7 +1,11 @@
-const MentalDisorders = [
+import axios from 'axios';
+
+
+const MentalDisorders = 
+[
   {
       name:"Loneliness",
-      imageUrl: 'https://i.postimg.cc/wvVdY96r/lon.jpg',
+      image: 'https://i.postimg.cc/wvVdY96r/lon.jpg',
       title:"Breaking the Cycle of Loneliness: Strategies for Connection",
       description:"Loneliness is an emotional state that can have a significant impact on mental health. It is characterized by feelings of isolation, disconnection, and a lack of companionship. Addressing loneliness requires proactive steps to build connections and seek support.",
       what_is:"Loneliness is a subjective feeling of social isolation or a perceived lack of meaningful connections. It can occur regardless of the number of social interactions one has and can affect individuals of all ages and backgrounds. Loneliness is not solely determined by the physical presence of others but rather the quality and depth of relationships.",
@@ -32,7 +36,7 @@ const MentalDisorders = [
   },
   {
       name: "Anxiety",
-      imageUrl: "https://i.postimg.cc/NfFQYwq9/dep.jpg",
+       image: "https://i.postimg.cc/NfFQYwq9/dep.jpg",
       title: "Managing Anxiety: Coping Strategies for Inner Peace",
       description: "Anxiety is a common mental health condition characterized by excessive worry, fear, and uneasiness. It can manifest in various forms, such as generalized anxiety disorder, panic disorder, or social anxiety disorder. Managing anxiety involves adopting coping strategies to reduce symptoms and promote a sense of calm.",
       what_is: "Anxiety is a natural response to stress or perceived threats. It becomes a disorder when it persists over time and interferes with daily life. Common symptoms of anxiety include excessive worrying, restlessness, difficulty concentrating, irritability, muscle tension, and sleep disturbances.",
@@ -63,7 +67,7 @@ const MentalDisorders = [
     },
     {
       name: "Depression",
-      imageUrl: 'https://i.postimg.cc/432zL9c2/dep.jpg',
+       image: 'https://i.postimg.cc/432zL9c2/dep.jpg',
       title: "Overcoming Depression: Strategies for Emotional Well-being",
       description: "Depression is a mood disorder characterized by persistent feelings of sadness, loss of interest, and a lack of motivation. It can affect daily functioning and overall quality of life. Overcoming depression involves a combination of professional help, self-care practices, and social support.",
       what_is: "Depression is more than feeling sad or experiencing temporary mood swings. It is a medical condition that affects how one thinks, feels, and acts. Common symptoms of depression include persistent sadness, loss of interest in activities, changes in appetite and sleep patterns, fatigue, feelings of guilt or worthlessness, difficulty concentrating, and thoughts of self-harm or suicide.",
@@ -94,7 +98,7 @@ const MentalDisorders = [
     },
     {
       name: "Stress",
-      imageUrl: 'https://i.postimg.cc/tJkRkhZY/stress.jpg',
+       image: 'https://i.postimg.cc/tJkRkhZY/stress.jpg',
       title: "Managing Stress: Strategies for a Balanced Life",
       description: "Stress is a natural response to challenges or demands, but excessive or chronic stress can have a negative impact on mental and physical well-being. Managing stress involves adopting strategies to reduce its effects and promote a more balanced and resilient life.",
       what_is: "Stress is the body's response to any demand or pressure. It can be triggered by various factors, including work, relationships, or major life changes. Common symptoms of stress include irritability, anxiety, difficulty concentrating, sleep disturbances, muscle tension, and changes in appetite or weight.",
@@ -123,7 +127,26 @@ const MentalDisorders = [
         "Limit exposure to stressors and establish a healthy work-life balance"
       ]
     }
-  
 ]
+
+
+// const mentalDisorderApiData = ()=>{
+//   axios.get('/mentalDisorderDetails')
+//   .then((response)=>{
+//     const data = response.data.data;
+//     console.log('disorderr data')
+//     console.log(data);
+//     return data;
+//   })
+//   .catch((e)=>{
+//       console.log('there is error in fetchin data')
+//       console.log('error is ',e);
+//   })
+// }
+
+// const MentalDisorders = mentalDisorderApiData();
+
+
+
 
 export default MentalDisorders;
