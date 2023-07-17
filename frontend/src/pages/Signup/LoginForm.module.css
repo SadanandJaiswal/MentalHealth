@@ -1,0 +1,282 @@
+
+/* LoginForm.module.css */
+
+.LoginForm_background {
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+  
+  .LoginForm_shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  /* LoginForm.module.css */
+
+/* Add your existing styles here */
+
+.signinButton {
+  /* Add alignment properties */
+  /* display: block;
+  margin: 0 auto; */
+  margin-top: 10px;
+}
+
+/* Add more styles as needed */
+
+  
+  .LoginForm_shape:first-child {
+    background: linear-gradient(#1845ad, #23a2f6);
+    left: -80px;
+    top: -80px;
+  }
+  
+  .LoginForm_shape:last-child {
+    background: linear-gradient(to right, #ff512f, #f09819);
+    right: -80px;
+    bottom: -80px;
+  }
+  
+  .LoginForm_form {
+    /* height: px; */
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+  }
+  
+  .LoginForm_form * {
+    font-family: 'Poppins', sans-serif;
+    color: #080710;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+  }
+  
+  .LoginForm_form h3 {
+    color: #1845ad;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+  }
+  
+  .LoginForm_form label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .LoginForm_form input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .LoginForm_form ::placeholder {
+    color: #e5e5e5;
+    color:grey;
+  }
+  
+  .LoginForm_form button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .LoginForm_social {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .LoginForm_social div {
+    width: 150px;
+    border-radius: 3px;
+    padding: 5px 10px 10px 5px;
+    background-color: rgba(255, 255, 255, 0.27);
+    color: #eaf0fb;
+    text-align: center;
+  }
+  
+  .LoginForm_social div:hover {
+    background-color: rgba(255, 255, 255, 0.47);
+  }
+  
+  .LoginForm_social .go {
+    margin-left: 25px;
+  }
+  
+  .LoginForm_social i {
+    margin-right: 4px;
+  }
+  
+  .signupText {
+    color: blue;
+    font-size: 16px;
+  }
+  
+/* LoginForm.module.css
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080710;
+}
+
+.LoginForm_background {
+  width: 430px;
+  height: 520px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.LoginForm_shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.LoginForm_shape:first-child {
+  background: linear-gradient(#1845ad, #23a2f6);
+  left: -80px;
+  top: -80px;
+}
+
+.LoginForm_shape:last-child {
+  background: linear-gradient(to right, #ff512f, #f09819);
+  right: -80px;
+  bottom: -80px;
+}
+
+.LoginForm_form {
+  height: 520px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+
+.LoginForm_form * {
+  font-family: ‘Poppins’, sans-serif;
+  color: #080710;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+
+.LoginForm_form h3 {
+  color: white;
+  color: #080710;
+  color: #1845ad;
+  font-style: bold;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+
+.LoginForm_form label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.LoginForm_form input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.LoginForm_form ::placeholder {
+  color:grey;
+}
+
+.LoginForm_form button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.LoginForm_social {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  display: flex;
+}
+
+.LoginForm_social div {
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255, 255, 255, 0.27);
+  color: #eaf0fb;
+  color:blue;
+  text-align: center;
+}
+
+.LoginForm_social div:hover {
+  background-color: rgba(255, 255, 255, 0.47);
+}
+
+.LoginForm_social .fb {
+  margin-left: 25px;
+}
+
+.LoginForm_social i {
+  margin-right: 4px;
+} */
