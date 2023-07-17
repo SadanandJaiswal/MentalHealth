@@ -31,7 +31,7 @@
 .viewBTN div{
     border-radius: 12px;
     padding: 5px;
-    background-color: white;
+    background-color: rgb(240, 168, 168);
 
 }
 
@@ -51,7 +51,10 @@
 }
 
 h2{
-    color:white;
+  color:rgb(11, 100, 44);
+}
+h1{
+  color:rgb(188, 45, 138);
 }
 /* <!-- HTML !-->
 <button class="button-64" role="button"><span class="text">Button 64</span></button> */

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import "../style/Home.css";
 import { meditationTypes } from "../components/meditation/meditationData";
@@ -54,7 +54,7 @@ function SliderComponent({ items, viewMorePath }) {
       <div className="main mt-4">
         <div className="row">
           {visibleItems.map((item) => (
-            <div className="col-md-4 col-lg-4 col-sm-4" key={item.name}>
+            <div className="col-md-12 col-lg-4 col-sm-4" key={item.name}>
               <div
                 className="card"
                 style={{ boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px" }}
@@ -76,12 +76,14 @@ function SliderComponent({ items, viewMorePath }) {
                     />
                   )}
                 </div>
-                <h3>{item.name}</h3>
-                {item.problems && (
-                  <p className="slider-problems">
-                    <b>Problems:</b> {item.problems}
-                  </p>
-                )}
+                <h3>
+                  <div
+                    className="nme"
+                    style={{ fontFamily: "Lumanosimo" }}
+                  >
+                    {item.name}
+                  </div>
+                </h3>
               </div>
             </div>
           ))}
@@ -92,6 +94,19 @@ function SliderComponent({ items, viewMorePath }) {
 }
 
 const Home = () => {
+  const [greeting, setGreeting] = useState("");
+
+  useEffect(() => {
+    const currentHour = new Date().getHours();
+    if (currentHour >= 3 && currentHour < 12) {
+      setGreeting("Good Morning");
+    } else if (currentHour >= 12 && currentHour < 18) {
+      setGreeting("Good Afternoon");
+    } else {
+      setGreeting("Good Evening");
+    }
+  }, []);
+
   return (
     <>
       <div>
@@ -105,15 +120,35 @@ const Home = () => {
             </button>
           </Link>
         </div>
+        <h1 className="font-bold text-left"    style={{
+              fontSize: "40px",
+              color: "blue",
+              fontFamily: "Lugrasimo",
+            }} >
+          <div
+            style={{
+              fontSize: "40px",
+              color: "blue",
+              fontFamily: "Lugrasimo",
+            }}
+          >
+            {greeting}
+          </div>
+        </h1>
 
-        <h1>Home</h1>
-        <h2>Meditation</h2>
+        <h2>
+          <div style={{ fontFamily: "Roboto Slab " }}>Meditation</div>
+        </h2>
         <SliderComponent items={meditationTypes} viewMorePath="/meditation" />
 
-        <h2>Sleep</h2>
+        <h2>
+          <div style={{ fontFamily: "Ubuntu " }}>Sleep</div>
+        </h2>
         <SliderComponent items={SleepApi} viewMorePath="/sleep" />
 
-        <h2>Disorders</h2>
+        <h2>
+          <div style={{ fontFamily: "Ubuntu " }}>Disorders</div>
+        </h2>
         <SliderComponent items={disorderApi} viewMorePath="/MentalDisorder" />
       </div>
     </>
