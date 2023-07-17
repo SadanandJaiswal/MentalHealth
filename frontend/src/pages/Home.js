@@ -7,11 +7,11 @@ import ReactPlayer from "react-player";
 import Meditation from './Meditaion';
 import SleepApi from '../api/SleepApi';
 import disorderApi from '../api/disorderApi';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
 
-  // const [tiralData,setData] = useState(0);
+const Home = () => {
 
   // axios.get('/trialData')
   //   .then(response => {

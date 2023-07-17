@@ -1,4 +1,5 @@
-export const meditationTypes = [
+export const meditationTypes = 
+[
   {
     id: 'one',
     name: "Mindfulness Meditation",
@@ -504,5 +505,5 @@ export const meditationTypes = [
     ],
     videoUrl: "https://youtu.be/F9ArAP7rz_U"
   }
-
-];
+]
+;

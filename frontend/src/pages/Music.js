@@ -14,7 +14,8 @@ const AudioPlayer = () => {
 
 
 
-  const songs = [
+  const songs = 
+  [
     {
       title: 'Krishna Flute',
       image: 'https://via.placeholder.com/150',
@@ -45,7 +46,8 @@ const AudioPlayer = () => {
       image: 'https://via.placeholder.com/150',
       link: music1
     },
-  ];
+  ]
+  ;
 
   const currentSong = songs[currentSongIndex];
 

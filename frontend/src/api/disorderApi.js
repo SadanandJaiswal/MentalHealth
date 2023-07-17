@@ -1,4 +1,8 @@
-const MentalDisorders = [
+import axios from 'axios';
+
+
+const MentalDisorders = 
+[
   {
       name:"Loneliness",
       imageUrl: 'https://i.postimg.cc/wvVdY96r/lon.jpg',
@@ -123,7 +127,9 @@ const MentalDisorders = [
         "Limit exposure to stressors and establish a healthy work-life balance"
       ]
     }
-  
 ]
+
+
+
 
 export default MentalDisorders;
