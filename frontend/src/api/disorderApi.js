@@ -1,4 +1,8 @@
-const MentalDisorders = [
+import axios from 'axios';
+
+
+const MentalDisorders = 
+[
   {
       name:"Loneliness",
       image: 'https://i.postimg.cc/wvVdY96r/lon.jpg',
@@ -123,7 +127,26 @@ const MentalDisorders = [
         "Limit exposure to stressors and establish a healthy work-life balance"
       ]
     }
-  
 ]
+
+
+// const mentalDisorderApiData = ()=>{
+//   axios.get('/mentalDisorderDetails')
+//   .then((response)=>{
+//     const data = response.data.data;
+//     console.log('disorderr data')
+//     console.log(data);
+//     return data;
+//   })
+//   .catch((e)=>{
+//       console.log('there is error in fetchin data')
+//       console.log('error is ',e);
+//   })
+// }
+
+// const MentalDisorders = mentalDisorderApiData();
+
+
+
 
 export default MentalDisorders;

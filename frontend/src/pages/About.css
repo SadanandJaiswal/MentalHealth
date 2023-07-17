@@ -4,76 +4,69 @@
   margin: auto;
 }
 
-.about-us-container img {
-    width: 90%;
-    height: 400px;
-    margin: 20px;
+.img-div {
+  overflow: hidden;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.about-us-container img {
+    width: 90%;
+    height: 100%;
+    margin: 20px;
+    border-radius: 2rem;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .about-us-heading {
-  font-size: 4rem;
-  font-weight: bold;
-  color: lavenderblush;
+  font-size: 6rem;
+  color: black;
   text-align: center;
   margin: 20px 0;
-  animation: slide-in 1s ease-in-out; /* Apply slide-in animation to the heading */
+  font-family: 'Chela One', cursive;
 }
 
 .about-us-subheading {
   font-size: 3rem;
   font-weight: bold;
-  color: #666;
+  font-style: italic;
+  color: rgb(230, 0, 255);
+  color: rgb(92, 43, 90);
   margin-top: 20px;
   margin-bottom: 10px;
-  transition: color 0.3s ease; /* Apply color transition to subheadings */
-}
-
-.about-us-subheading:hover {
-  color: #ff6b6b;
+  font-family: 'Pacifico', cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .about-us-description {
     font-size: 2rem;
-    color: white;
+    color: rgb(137, 58, 135);
     line-height: 1.5;
+    margin-top: 2rem;
     margin-bottom: 20px;
-    animation: fade-in 1s ease-in-out; /* Apply fade-in animation to the descriptions */
-  }
-  
-  /* Add hover effect to descriptions */
-  .about-us-description:hover {
-    color: #ff6b6b;
-    cursor: pointer;
-  }
-  
-  /* Add transition for hover effect */
-  .about-us-description:hover {
-    color: #ff6b6b;
-    cursor: pointer;
-  }
-  
-  /* Apply animation to subheadings and descriptions on hover */
-  .about-us-subheading:hover ~ .about-us-description {
-    animation: slide-in 0.5s ease-in-out;
-  }
-  
-  /* Add spacing between sections */
-  .about-us-subheading:not(:first-child) {
-    margin-top: 30px;
-  }
-  
-  /* Apply animation to subheadings and descriptions on hover */
-  .about-us-subheading:hover ~ .about-us-description {
-    animation: slide-in 0.5s ease-in-out;
-  }
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Pacifico', cursive;
+}
+
+.accord-heading1 {
+  font-family: 'Chela One', cursive;
+  color: rgb(255, 106, 131);
+  color: white;
+
+}
+
+.accord-heading2 {
+  font-family: 'Chela One', cursive;
+  color: rgb(255, 106, 131);
+}
+
+.acco-p {
+  font-family: 'Pacifico', cursive;
+  color: rebeccapurple;
+  font-size: 2rem;
+}
+
+.acco-p1 {
+  font-family: 'Pacifico', cursive;
+  color: rgb(255, 106, 131);
+  color: lavenderblush;
+  font-size: 2rem;
+}

@@ -1,8 +1,13 @@
-import music1 from "../components/songs/yt1s.com - Relaxing Sounds.mp3"
-import music2 from "../components/songs/yt1s.com - Relaxing Sounds.mp3"
 import React, { useState, useRef , useEffect} from 'react';
 import ReactPlayer from 'react-player';
 import "../style//Music.css";
+import musicFile1 from "../components/songs/yt1s.com - Relaxing Sounds.mp3";
+import musicFile2 from "../components/songs/04-Meydan-Surreal-Forest.mp3";
+import musicFile3 from "../components/songs/burghrecords__birds-singing-forest-scotland.mp3";
+import musicFile4 from "../components/songs/Calm-and-Peaceful.mp3";
+import musicFile5 from "../components/songs/felix-blume__wave-on-the-beach-in-thailand-at-20-meters-form-the-water-during-the-night.mp3";
+import musicFile6 from "../components/songs/plasterbrain__loop-by-the-sea.mp3";
+import musicFile7 from "../components/songs/smand__nightingale-song.mp3";
 
 const AudioPlayer = () => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -13,39 +18,55 @@ const AudioPlayer = () => {
   const [musicLike,setMuiscLike] = useState([])
 
 
-
-  const songs = [
+  const songs = 
+  [
     {
       title: 'Krishna Flute',
       image: 'https://via.placeholder.com/150',
       link: 'https://music.youtube.com/embed/dzKqWDrp0Sc'
     },
     {
-      title: 'autumn',
+      title: 'Autumn Feel',
       image: 'https://via.placeholder.com/150',
       link: 'https://www.youtube.com/embed/aE6EEATmVhs'
     },
     {
-      title: 'Char Kadam',
+      title: 'Relaxing Sound',
       image: 'https://via.placeholder.com/150',
-      link: 'https://www.youtube.com/embed/Px4-yQRZu_U'
+      link: musicFile1
     },
     {
-      title: 'music1',
+      title: 'Meydan Surreal Forest',
       image: 'https://via.placeholder.com/150',
-      link: music1
+      link: musicFile2
     },
     {
-      title: 'Calm',
+      title: 'Birds Singing Forest Scotland',
       image: 'https://via.placeholder.com/150',
-      link: 'https://music.youtube.com/watch?v=hO2U1dmOD7g'
+      link: musicFile3
     },
     {
-      title: 'music1 lorem sfdsf s  fsdf df sfs fsd fd',
+      title: 'Calm and Peaceful',
       image: 'https://via.placeholder.com/150',
-      link: music1
+      link: musicFile4
     },
-  ];
+    {
+      title: 'Wave on the beach',
+      image: 'https://via.placeholder.com/150',
+      link: musicFile5
+    },
+    {
+      title: 'Loop by the sea',
+      image: 'https://via.placeholder.com/150',
+      link: musicFile6
+    },
+    {
+      title: 'Nightingale Song',
+      image: 'https://via.placeholder.com/150',
+      link: musicFile7
+    },
+  ]
+  ;
 
   const currentSong = songs[currentSongIndex];
 
@@ -229,4 +250,3 @@ const AudioPlayer = () => {
 };
 
 export default AudioPlayer;
-

@@ -1,28 +1,25 @@
-import { Link } from "react-router-dom";
-import styles from "./styles.module.css";
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import styles from './LoginForm.module.css';
+import { Link } from 'react-router-dom';
 import axios from "axios";
-import {useState,useEffect} from 'react';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 
-function Signup() {
 
-	const [user, setUser] = useState({
+const LoginForm = () => {
+  const [user, setUser] = useState({
 		name:"",
 		email:"",
 		password:""
 	});
 
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
 	const navigate = useNavigate();
 
-	const googleAuth = () => {
-		window.open(
-			`${process.env.REACT_APP_API_URL}/auth/google/callback`,
-			"_self"
-		);
-	};
-
-	const submitForm = (event)=>{
+  const submitForm = (event)=>{
 		event.preventDefault();
 		const name = event.target.name.value;
 		const email = event.target.email.value;
@@ -35,8 +32,6 @@ function Signup() {
 			if(response.data)
 			{
 				axios.get("/me").then(res=>{
-					// Cookies.set('userName', res.data.user.name, { expires: 10*86400*1000 }); // Expires in 7 days
-					// Cookies.set('userEmail',res.data.user.email, { expires: 10*86400*1000 });
 					Cookies.set('userData', JSON.stringify(res.data) ,  { expires: 10*86400*1000 });
 					if(Cookies.get('userData'))
 					{
@@ -54,7 +49,7 @@ function Signup() {
 	}
 
 
-	const registerDataChange = (e) =>{
+  const registerDataChange = (e) =>{
 		setUser({ ...user, [e.target.name]: e.target.value });
 	}
 
@@ -62,49 +57,57 @@ function Signup() {
 		console.log(user.name);
 		console.log(user.email);
 		console.log(user.password);
-	},[user])
+	},[user]);
 
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
 
-	return (
-		<div className={styles.container}>
-			<h1 className={styles.heading}>Sign up Form</h1>
-			<form encType="multipart/form-data" onSubmit={submitForm}>
-				<div className={styles.form_container}>
-					<div className={styles.left}>
-						<img className={styles.img} src="./images/signup.jpg" alt="signup" />
-					</div>
-					<div className={styles.right}>
-						<h2 className={styles.from_heading}>Create Account</h2>
-						<input type="text" 
-						// value="saddy92" 
-							onChange={registerDataChange}
-							className={styles.input} placeholder="Username" name="name"/>
-						<input type="text" 
-						// value="saddy92@gmail.com" 
-						className={styles.input} placeholder="Email" name="email"
-						onChange={registerDataChange}/>
-						<input
-							type="password"
-							className={styles.input}
-							placeholder="Password"
-							name="password"
-							// value="saddy92"
-							onChange={registerDataChange}
-						/>
-						<button className={styles.btn}>Sign Up</button>
-						<p className={styles.text}>or</p>
-						<button className={styles.google_btn} onClick={googleAuth}>
-							<img src="./images/google.png" alt="google icon" />
-							<span>Sing up with Google</span>
-						</button>
-						<p className={styles.text}>
-							Already Have Account ? <Link to="/login">Log In</Link>
-						</p>
-					</div>
-				</div>
-			</form>
-		</div>
-	);
-}
+  return (
+    <>
+      <div className={styles.LoginForm_background}>
+        <div className={styles.LoginForm_shape}></div>
+        <div className={styles.LoginForm_shape}></div>
+      </div>
+      <form className={styles.LoginForm_form} encType="multipart/form-data" onSubmit={submitForm}>
+        <h3>SignUp</h3>
+        <label htmlFor="username">Username</label>
+        <input
+        onChange={registerDataChange} name="name" type="text" placeholder="Email or Phone" id="username" />
+        <label htmlFor="email">Email</label>
+        <input
+        onChange={registerDataChange} name="email" type="text" placeholder="Email" id="email" />
+        <label htmlFor="password">Password</label>
+        <div className={styles.show_password_button}>
+          <input
+          onChange={registerDataChange}
+            type={passwordVisible ? 'text' : 'password'}
+            id="myInput"
+            name="password"
+            placeholder="Enter your password"
+          />
+          <FontAwesomeIcon
+            icon={passwordVisible ? faEyeSlash : faEye}
+            id="togglePassword"
+            onClick={togglePasswordVisibility}
+          />
+        </div>
+        <button className={styles.signinButton}>Sign In</button>
+        <div className={styles.LoginForm_social}>
+          <div className={styles.go}>
+            <FontAwesomeIcon icon={faUserPlus} />
+            <span className={styles.signupText}>
+              <Link to="/login"> Login</Link>
+            </span>
+          </div>
+          {/* <div className="fb">
+            <i className="fa fa-facebook-official"></i>
+            Facebook
+          </div> */}
+        </div>
+      </form>
+    </>
+  );
+};
 
-export default Signup;
+export default LoginForm;

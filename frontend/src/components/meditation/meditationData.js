@@ -1,4 +1,5 @@
-export const meditationTypes = [
+export const meditationTypes = 
+[
   {
     id: "one",
     name: "Focus on Your Goal Meditation",
@@ -558,6 +559,101 @@ export const meditationTypes = [
     ],
     videoUrl: "https://youtu.be/o_SHRA0oxRQ"
   },
- 
+  {
+    id: "twenty-one",
+    name: "Focus on Your Goal Meditation",
+    category: "Focus Meditation",
+    steps: [
+      "Sit in a comfortable position and close your eyes",
+      "Take a few deep breaths to relax",
+      "Visualize your goal with clarity and detail",
+      "See yourself taking the necessary steps to achieve it",
+      "Engage your senses and emotions in this visualization",
+      "Stay focused on your goal for the duration of the meditation",
+      "When you're ready, slowly open your eyes",
+      "Take inspired action towards your goal"
+    ],
+    videoUrl: "https://youtu.be/4Nw8EmF-DqE"
+  },
+  {
+    id: "twenty-two",
+    name: "Mindful Focus Meditation",
+    category: "Focus Meditation",
+    steps: [
+      "Find a quiet and comfortable space to sit",
+      "Gently close your eyes and take a few deep breaths",
+      "Bring your attention to the present moment",
+      "Notice the sensations in your body and the sounds around you",
+      "Allow your thoughts to come and go without judgment",
+      "Keep redirecting your focus to the present whenever your mind wanders",
+      "Continue practicing mindful focus for the desired duration",
+      "When you're ready, gently open your eyes"
+    ],
+    videoUrl: "https://youtu.be/iFpCeuA1mRs"
+  }
+  ,{
+    id: "twenty-three",
+    name: "Inner Peace Meditation",
+    category: "Inner Peace",
+    steps: [
+      "Find a quiet and comfortable place to sit",
+      "Close your eyes and take several deep breaths",
+      "Allow your body to relax with each exhale",
+      "Bring your awareness to the present moment",
+      "Silently repeat the affirmation 'I am peace'",
+      "Feel the sense of calm and tranquility within",
+      "Continue this practice for the desired duration",
+      "When you're ready, gently open your eyes"
+    ],
+    videoUrl: "https://youtu.be/pAEioF7FaWY"
+  },
+  {
+    id: "twenty-four",
+    name: " Inner Peace and Meditation",
+    category: "Inner Peace",
+    steps: [
+      "Find a comfortable position and close your eyes",
+      "Take a deep breath and release any tension in your body",
+      "Bring your attention to the sensation of relaxation",
+      "Imagine a peaceful scene or visualize floating on a calm ocean",
+      "Allow yourself to let go of any worries or stress",
+      "Stay in this relaxed state for the duration of the meditation",
+      "When you're ready, slowly open your eyes"
+    ],
+    videoUrl: "https://youtu.be/94IFuiy8TPM"
+  },
+  {
+    id: "twenty-five",
+    name: "Manifesting Peace Meditation",
+    category: "Inner Peace",
+    steps: [
+      "Sit comfortably and take a few deep breaths",
+      "Focus your attention on the feeling of peace within",
+      "Visualize peace spreading throughout your body",
+      "Expand your visualization to your surroundings and the world",
+      "Hold the intention of manifesting peace in your life",
+      "Continue to feel and radiate peace for the desired duration",
+      "When you're ready, gently open your eyes",
+      "Carry the energy of peace with you throughout the day"
+    ],
+    videoUrl: "https://youtu.be/9fr6geQtd88"
+  },
+  {
+    id: "twenty-six",
+    name: "Inner Peace Affirmation",
+    category: "Inner Peace",
+    steps: [
+      "Find a comfortable seated position",
+      "Close your eyes and take a few deep breaths",
+      "Repeat the affirmation 'I am calm and at peace'",
+      "Allow the words to sink into your being",
+      "Feel the sense of inner peace growing within you",
+      "Continue affirming for the desired duration",
+      "When you're ready, gently open your eyes",
+      "Carry the affirmation of inner peace with you"
+    ],
+    videoUrl: "https://youtu.be/F9ArAP7rz_U"
+  }
+]
+;
 
-];

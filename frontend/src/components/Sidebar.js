@@ -144,7 +144,6 @@ const Sidebar = ({ children }) => {
               exit='hidden'
               className='logo'
             >
-         
             </motion.h1>
           )}
           <div className='bars'>
