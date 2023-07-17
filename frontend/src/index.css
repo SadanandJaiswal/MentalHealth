@@ -15,8 +15,14 @@ body{
 * Created with https://www.css-gradient.com
 * Gradient link: https://www.css-gradient.com/?c1=17fe51&c2=6a4fea&gt=l&gd=dtl
 */
+background: rgb(238,174,202);
+  background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+/*    
 background: #17FE51;
-background: linear-gradient(135deg, #17FE51, #6A4FEA);
+background: linear-gradient(135deg, #17FE51, #6A4FEA); */
    /* background-image: url("https://cdn.pixabay.com/photo/2015/10/09/00/55/lotus-978659_1280.jpg"); */
    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoViEw1e10xKc_zDUDdHhpAozQgnRHRpB-Wm4PCyVAhOwl8lTOrBxcwoxc-eSKGvgRoqM&usqp=CAU');
    background-color:lavenderblush;
@@ -41,19 +47,6 @@ main {
   font-size: 30px;
 }
 
-.sidebar {
-  /* background: rgb(0, 7, 61); */
-  background: black;
-  color: white;
-  /* min-height: 100vh; */
-  height: 100vh;
-}
-/* 
-.sidebar:hover{
-  background:#dd96cf;
-  color:black;
-  min-height: 100vh;
-} */
 
 .routes {
   color: white;
@@ -352,19 +345,6 @@ main {
 .title {
   font-size: 30px;
 }
-
-.sidebar {
-  /* background: rgb(0, 7, 61); */
-  background: black;
-  color: white;
-  min-height: 100vh;
-}
-/* 
-.sidebar:hover{
-  background:#dd96cf;
-  color:black;
-  min-height: 100vh;
-} */
 
 .routes {
   color: white;
