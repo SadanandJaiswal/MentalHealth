@@ -1,6 +1,175 @@
-
-.my-card .card img{
-    /* aspect-ratio: 4/3; */
+.quote-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+  }
+  
+  .badge {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+.quote-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this property to distribute items evenly */
+  }
+  
+  .like-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .like-button {
+    margin-right:2px; /* Add margin to create spacing between like button and share button */
+  }
+  
+  .quote-item img {
     width: 100%;
-    object-fit: contain;
-}
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px; /* Apply border radius to the image */
+  }
+  
+  /* Rest of the styles */
+  
+.like-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #ff69b4; 
+    font-size: 24px;/* Change the color to reddish pink */
+    cursor: pointer;
+  }
+  
+  .share-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color:black;
+    cursor: pointer;
+    font-size: 24px; /* Increase the font size for a bigger share button */
+    margin-left: 10px; /* Add some spacing between the like and share buttons */
+  }
+  
+  .quote-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .like-count {
+    color:red;
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+  
+ .card.shadow {
+    box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+.like-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color:red; /* Change the color to reddish pink */
+    cursor: pointer;
+  }
+  
+  .like-count {
+    margin-left: 5px;
+  }
+  
+.quote-item {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .quote-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .quote-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .author {
+    font-size:14px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .quote-details {
+    padding: 10px;
+  }
+  
+  .quote-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .like-count {
+    margin-left: 5px;
+  }
+  
+.quote-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .quote-item {
+    width: calc(33.33% - 10px); /* Adjust the width as needed */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+  }
+  
+  .quote-item img {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .quote-item img:hover{
+
+  }
+ 
+
+  @media screen and (max-width:1000px) {
+    .quote-item {
+      width: calc(50% - 10px);
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .quote-item {
+      width: 100%;
+    }
+  }
