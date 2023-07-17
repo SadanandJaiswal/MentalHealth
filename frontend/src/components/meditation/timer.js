@@ -36,19 +36,22 @@ const Timer = () => {
     return `${formattedMinutes}:${formattedSeconds}`;
   };
 
-  return (
-    <div className="timer-container">
+  return (<>
+     <div className="timer-container">
       <div className="timer" onClick={handleTimerClick}>
-        <div className="timer-content">
-          <h1>{formatTime(seconds)}</h1>
-        </div>
+        <div className="timer-content"> </div> <h1>
+        <span className="highlight-text" style={{  fontSize:"18px" ,fontWeight: 'bold', color: 'black' }}>
+  {formatTime(seconds)}
+</span>
+
+          </h1>
       </div>
       <div className="button-container">
         <button className="reset-button" onClick={handleResetClick}>
           Reset
         </button>
       </div>
-    </div>
+    </div></>
   );
 };
 

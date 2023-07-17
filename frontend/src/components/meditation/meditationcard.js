@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
 import { meditationTypes } from "./meditationData";
@@ -9,6 +9,7 @@ const MeditationCard = () => {
     ...new Set(meditationTypes.map((meditation) => meditation.category)),
   ];
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [isSticky, setIsSticky] = useState(false);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -17,6 +18,7 @@ const MeditationCard = () => {
   const handleAllClick = () => {
     setSelectedCategory(null);
   };
+
   const playerStyle = {
     position: "absolute",
     inset: "0px",
@@ -34,9 +36,22 @@ const MeditationCard = () => {
     objectFit: "cover",
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setIsSticky(scrollTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <>
-      <div className="navbar-container">
+    <><div className="fixed">
+      <div className={`navbar-container ${isSticky ? "sticky" : ""}`}>
         <div className="col-12">
           <ul className="nav nav-pills justify-content-center mb-4">
             <li className="nav-item">
@@ -59,18 +74,18 @@ const MeditationCard = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </div></div>
       <div className="main mt-4">
-        <div className="mrow row-lg-4">
+        <div className="row row-lg-4">
           {meditationTypes
             .filter((meditation) =>
               selectedCategory ? meditation.category === selectedCategory : true
             )
             .map((meditation) => (
-              <div className="col-md-4 col-lg-4 col-sm-4" key={meditation.id}>
+              <div className="col-md-4 col-lg-4 col-sm-4 mb-4" key={meditation.id}>
                 <Link to={`/meditation/${meditation.id}`} className="card-link">
-                  <div className="card">
-                  <div className="video-container-card">
+                  <div className="card p-3">
+                    <div className="video-container-card">
                       <ReactPlayer
                         url={meditation.videoUrl}
                         controls={true}
@@ -83,14 +98,15 @@ const MeditationCard = () => {
                     </div>
                     <div
                       className="card-body"
-                      style={{color: "azure", fontFamily: "Lumanosimo" }}
+                      style={{ color: "azure", fontFamily: "Lumanosimo" }}
                     >
                       {meditation.name}
                     </div>
                   </div>
                 </Link>
               </div>
-            ))}
+            ))
+            }
         </div>
       </div>
     </>

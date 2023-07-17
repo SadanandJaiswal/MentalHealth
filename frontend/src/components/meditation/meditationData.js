@@ -1,7 +1,156 @@
 export const meditationTypes = 
 [
   {
-    id: 'one',
+    id: "one",
+    name: "Focus on Your Goal Meditation",
+    category: "Focus Meditation",
+    steps: [
+      "Sit in a comfortable position and close your eyes",
+      "Take a few deep breaths to relax",
+      "Visualize your goal with clarity and detail",
+      "See yourself taking the necessary steps to achieve it",
+      "Engage your senses and emotions in this visualization",
+      "Stay focused on your goal for the duration of the meditation",
+      "When you're ready, slowly open your eyes",
+      "Take inspired action towards your goal",
+    ],
+    videoUrl: "https://youtu.be/4Nw8EmF-DqE",
+    benefits: [
+      "Enhances focus and concentration",
+      "Increases motivation and determination",
+      "Helps align your mindset with your goals",
+    ],
+    problems: [
+      "Difficulty maintaining focus",
+      "Lack of clarity in defining goals",
+    ],
+  },
+  {
+    id: "two",
+    name: "Mindful Focus Meditation",
+    category: "Focus Meditation",
+    steps: [
+      "Find a quiet and comfortable space to sit",
+      "Gently close your eyes and take a few deep breaths",
+      "Bring your attention to the present moment",
+      "Notice the sensations in your body and the sounds around you",
+      "Allow your thoughts to come and go without judgment",
+      "Keep redirecting your focus to the present whenever your mind wanders",
+      "Continue practicing mindful focus for the desired duration",
+      "When you're ready, gently open your eyes",
+    ],
+    videoUrl: "https://youtu.be/iFpCeuA1mRs",
+    benefits: [
+      "Promotes mindfulness and presence",
+      "Reduces distractions and improves concentration",
+      "Enhances self-awareness and acceptance",
+    ],
+    problems: [
+      "Restlessness and wandering thoughts",
+      "Difficulty staying present without judgment",
+    ],
+  },
+  {
+    id: "three",
+    name: "Inner Peace Meditation",
+    category: "Inner Peace",
+    steps: [
+      "Find a quiet and comfortable place to sit",
+      "Close your eyes and take several deep breaths",
+      "Allow your body to relax with each exhale",
+      "Bring your awareness to the present moment",
+      "Silently repeat the affirmation 'I am peace'",
+      "Feel the sense of calm and tranquility within",
+      "Continue this practice for the desired duration",
+      "When you're ready, gently open your eyes",
+    ],
+    videoUrl: "https://youtu.be/pAEioF7FaWY",
+    benefits: [
+      "Cultivates inner peace and serenity",
+      "Reduces anxiety and stress",
+      "Enhances emotional well-being",
+    ],
+    problems: [
+      "Restless thoughts and difficulty quieting the mind",
+      "Challenges in sustaining a peaceful state",
+    ],
+  },
+  {
+    id: "four",
+    name: "Inner Peace and Meditation",
+    category: "Inner Peace",
+    steps: [
+      "Find a comfortable position and close your eyes",
+      "Take a deep breath and release any tension in your body",
+      "Bring your attention to the sensation of relaxation",
+      "Imagine a peaceful scene or visualize floating on a calm ocean",
+      "Allow yourself to let go of any worries or stress",
+      "Stay in this relaxed state for the duration of the meditation",
+      "When you're ready, slowly open your eyes",
+    ],
+    videoUrl: "https://youtu.be/94IFuiy8TPM",
+    benefits: [
+      "Induces deep relaxation and calmness",
+      "Promotes a sense of inner harmony",
+      "Helps alleviate stress-related symptoms",
+    ],
+    problems: [
+      "Restlessness and difficulty achieving deep relaxation",
+      "Challenges in maintaining focus on peaceful imagery",
+    ],
+  },
+  {
+    id: "five",
+    name: "Manifesting Peace Meditation",
+    category: "Inner Peace",
+    steps: [
+      "Sit comfortably and take a few deep breaths",
+      "Focus your attention on the feeling of peace within",
+      "Visualize peace spreading throughout your body",
+      "Expand your visualization to your surroundings and the world",
+      "Hold the intention of manifesting peace in your life",
+      "Continue to feel and radiate peace for the desired duration",
+      "When you're ready, gently open your eyes",
+      "Carry the energy of peace with you throughout the day",
+    ],
+    videoUrl: "https://youtu.be/9fr6geQtd88",
+    benefits: [
+      "Cultivates a sense of peace and harmony within",
+      "Promotes a positive and peaceful mindset",
+      "Enhances the ability to manifest peace in daily life",
+    ],
+    problems: [
+      "Distractions and difficulties maintaining focus",
+      "Challenges in connecting with the feeling of peace",
+    ],
+  },
+  {
+    id: "six",
+    name: "Inner Peace Affirmation",
+    category: "Inner Peace",
+    steps: [
+      "Find a comfortable seated position",
+      "Close your eyes and take a few deep breaths",
+      "Repeat the affirmation 'I am calm and at peace'",
+      "Allow the words to sink into your being",
+      "Feel the sense of inner peace growing within you",
+      "Continue affirming for the desired duration",
+      "When you're ready, gently open your eyes",
+      "Carry the affirmation of inner peace with you",
+    ],
+    videoUrl: "https://youtu.be/F9ArAP7rz_U",
+    benefits: [
+      "Instills a sense of calm and tranquility",
+      "Empowers a positive and peaceful mindset",
+      "Reinforces a belief in inner peace and well-being",
+    ],
+    problems: [
+      "Distractions and wandering thoughts",
+      "Challenges in maintaining focus on the affirmation",
+    ],
+  },
+  {
+    id: "twenty-one",
     name: "Mindfulness Meditation",
     category: "Beginners",
     steps: [
@@ -20,7 +169,7 @@ export const meditationTypes =
     videoUrl: "https://youtu.be/ssss7V1_eyA",
   },
   {
-    id: 'two',
+    id: 'twenty-two',
     name: "Transcendental Mantra Meditation for Grounding",
     category: "Anxiety",
     steps: [
@@ -33,7 +182,7 @@ export const meditationTypes =
     videoUrl: "https://youtu.be/oxBSo9GwbtI",
   },
   {
-    id: 'three',
+    id: 'twenty-three',
     name: "Loving-Kindness Meditation",
     category: "Self-Care",
     steps: [
@@ -54,7 +203,7 @@ export const meditationTypes =
     videoUrl: "https://youtu.be/sDi40FQcaIU",
   },
   {
-    id: 'four',
+    id: 'twenty-four',
     name: "Om mantra",
     category: "Mantra Meditation",
     steps: [
@@ -75,7 +224,7 @@ export const meditationTypes =
     videoUrl: "https://youtu.be/3mMqQXlCtTM",
   },
   {
-    id: 'five',
+    id: 'twenty-five',
     name: "Focused Meditation",
     category: "Focus Meditation",
     steps: [
@@ -96,7 +245,7 @@ export const meditationTypes =
     videoUrl: "https://youtu.be/_z3mdzg_8Ss",
   },
   {
-    id: 'six',
+    id: 'twenty-six',
     name: "Movement Meditation",
     category: "Self-Care",
     steps: [
@@ -507,3 +656,4 @@ export const meditationTypes =
   }
 ]
 ;
+
