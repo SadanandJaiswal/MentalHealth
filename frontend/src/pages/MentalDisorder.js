@@ -55,7 +55,7 @@ const MentalDisorder = () => {
                   <img src={items.imageUrl} alt="" className='cardImage' />
                 </div>
                 <h2 className="cardTitle">{items.name}</h2>
-                <p className="cardContent">{items.description}</p>
+                <p className="cardContent">{items.title}</p>
                 <button className="readMore">Free From {items.name}</button>
               </div>
             </Link>

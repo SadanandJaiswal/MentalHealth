@@ -4,6 +4,7 @@ import "../style/Home.css";
 import { meditationTypes } from "../components/meditation/meditationData";
 import SleepApi from "../api/SleepApi";
 import disorderApi from "../api/disorderApi";
+import Cookies from 'js-cookie';
 import { Link } from "react-router-dom";
 
 function ViewMoreLink({ to }) {
@@ -18,7 +19,7 @@ function ViewMoreLink({ to }) {
   );
 }
 
-function SliderComponent({ items, viewMorePath }) {
+function SliderComponent({ items, category, viewMorePath }) {
   const [startIndex, setStartIndex] = useState(0);
 
   const handleShiftLeft = () => {
@@ -33,30 +34,37 @@ function SliderComponent({ items, viewMorePath }) {
 
   return (
     <>
-      <div className="d-flex justify-content-end">
-        <button
-          className="button-85"
-          onClick={handleShiftLeft}
-          disabled={startIndex === 0}
-        >
-          left
-        </button>
-        <button
-          className="button-85"
-          onClick={handleShiftRight}
-          disabled={startIndex + 3 >= items.length}
-        >
-          right
-        </button>
-        <ViewMoreLink to={viewMorePath} />
+      <div className="homeTitle">
+
+          <div style={{ fontFamily: "Roboto Slab " }}>
+            <h2>{category}</h2>
+          </div>
+
+        <div className="d-flex justify-content-end">
+          <button
+            className="button-85"
+            onClick={handleShiftLeft}
+            disabled={startIndex === 0}
+          >
+            left
+          </button>
+          <button
+            className="button-85"
+            onClick={handleShiftRight}
+            disabled={startIndex + 3 >= items.length}
+          >
+            right
+          </button>
+          <ViewMoreLink to={viewMorePath} />
+        </div>
       </div>
 
-      <div className="main mt-4">
-        <div className="row">
+      {/* <div className="main mt-4"> */}
+        <div className="main">
           {visibleItems.map((item) => (
-            <div className="col-md-12 col-lg-4 col-sm-4" key={item.name}>
+            <div className="row_child" key={item.name}>
               <div
-                className="card"
+                className="home_card"
                 style={{ boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px" }}
               >
                 <div className="video-card">
@@ -66,7 +74,7 @@ function SliderComponent({ items, viewMorePath }) {
                       controls={true}
                       light={true}
                       width="100%"
-                      height="150px"
+                      // height="150px"
                     />
                   ) : (
                     <img
@@ -88,13 +96,14 @@ function SliderComponent({ items, viewMorePath }) {
             </div>
           ))}
         </div>
-      </div>
     </>
   );
 }
 
 const Home = () => {
   const [greeting, setGreeting] = useState("");
+  let userData = Cookies.get('userData');
+
 
   useEffect(() => {
     const currentHour = new Date().getHours();
@@ -110,6 +119,18 @@ const Home = () => {
   return (
     <>
       <div>
+        {userData?
+        <div className="btn-33">
+          <Link to="/logout">
+            <button
+              className="fixed-button button-33"
+              style={{ fontSize: "13px" }}
+            >
+              LOGOUT
+            </button>
+          </Link>
+        </div>
+        :
         <div className="btn-33">
           <Link to="/login">
             <button
@@ -120,6 +141,7 @@ const Home = () => {
             </button>
           </Link>
         </div>
+      }
         <h1 className="font-bold text-left"    style={{
               fontSize: "40px",
               color: "blue",
@@ -136,20 +158,20 @@ const Home = () => {
           </div>
         </h1>
 
-        <h2>
+        {/* <h2>
           <div style={{ fontFamily: "Roboto Slab " }}>Meditation</div>
-        </h2>
-        <SliderComponent items={meditationTypes} viewMorePath="/meditation" />
+        </h2> */}
+        <SliderComponent items={meditationTypes} category="Meditation" viewMorePath="/meditation" />
 
-        <h2>
+        {/* <h2>
           <div style={{ fontFamily: "Ubuntu " }}>Sleep</div>
-        </h2>
-        <SliderComponent items={SleepApi} viewMorePath="/sleep" />
+        </h2> */}
+        <SliderComponent items={SleepApi} category="Sleep" viewMorePath="/sleep" />
 
-        <h2>
+        {/* <h2>
           <div style={{ fontFamily: "Ubuntu " }}>Disorders</div>
-        </h2>
-        <SliderComponent items={disorderApi} viewMorePath="/MentalDisorder" />
+        </h2> */}
+        <SliderComponent items={disorderApi} category="Disorders" viewMorePath="/MentalDisorder" />
       </div>
     </>
   );

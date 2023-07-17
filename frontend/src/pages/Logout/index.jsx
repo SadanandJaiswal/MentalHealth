@@ -26,6 +26,7 @@ function Logout() {
     return(
         <>
             <h1>Logout successful</h1>
+            <h2>Redirecting to the Home Page...</h2>
         </>
     )
 
