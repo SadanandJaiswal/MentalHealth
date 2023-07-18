@@ -9,5 +9,6 @@ connectDatabase();
 
 const server = app.listen(port, () => {
     console.log(`Server listening on port no ${port}`);
+    // console.log('node.js version: ', process.versions.node)
 });
 
