@@ -11,6 +11,8 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use(cors());
+app.use(cors({ origin: 'https://64b6e6b1b1e9ed0082596b13--jocular-queijadas-076081.netlify.app' }));
+
 
 const routes = require('./routes/routes')
 
