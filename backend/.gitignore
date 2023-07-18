@@ -1,3 +1,8 @@
 /node_modules
 
-/.env
+# Exclude .env file
+.env
+
+# Exclude package.json and package-lock.json
+package.json
+package-lock.json

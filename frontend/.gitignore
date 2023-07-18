@@ -26,7 +26,5 @@ yarn-error.log*
 # parallax
 /src/pages/parallax
 
-
-/package.json
-
-/package-lock.json
+package.json
+package-lock.json
