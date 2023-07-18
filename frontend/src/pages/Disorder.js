@@ -36,7 +36,7 @@ const Disorder = () => {
             if(item.name == disorder)
             {
             return(
-                    <div className="disorder_card" style={{color:'white'}}>
+                    <div className="disorder_card" style={{color:'white',fontSize:'2rem'}}>
                         <h1 className="name">{item.name}</h1>
                         <center>
                             <img src={item.imageUrl} alt="" />
