@@ -14,27 +14,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(cors({ origin:'https://jeevanbandhu.netlify.app', credentials:true }));
 // app.use(cors({origin:"*", credentials:true}));
 
-let origin ;
-app.use((req,res,next)=>{
-    origin = req.headers.origin;
-    console.log('origin is ',origin);
-})
+// let origin ;
+// app.use((req,res,next)=>{
+//     origin = req.headers.origin;
+//     console.log('origin is ',origin);
+// })
 
 // const allowedOrigins = ['http://localhost', 'https://jeevanbandhu.netlify.app'];
 
-if(origin == "localhost")
-{
-    app.use(cors({
-        origin: 'http://localhost',
-        credentials:true
-    }))
-}
-else{
-    app.use(cors({
-        origin: 'https://jeevanbandhu.netlify.app',
-        credentials:true
-    }))
-}
+const allowOrigin = ['http://localhost:3000', 'https://jeevanbandhu.netlify.app' ];
+
+app.use(cors({
+    origin:allowOrigin, 
+    credentials:true
+}))
 
 // const corsOptions = {
 //   origin: function (origin, callback) {
