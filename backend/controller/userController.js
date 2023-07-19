@@ -60,7 +60,9 @@ exports.loginUser = async (req,res,next)=>{
         return next(new ErrorHander("Invalid email or password"));
     }
 
-    sendToken(user,200,res);
+    const isLocalhost = req.headers.origin.includes("localhost");
+    
+    sendToken(user, 201, res, isLocalhost);
 
     console.log('successfully login')
 }

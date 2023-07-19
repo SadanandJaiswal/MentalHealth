@@ -35,6 +35,7 @@ const sendToken = (user, statuscode, res, isLocalhost) => {
       sameSite: "None", // You can keep this as "None" for cross-site access with HTTPS
     };
   
+    
     res
       .status(statuscode)
       .cookie("token", token, options)
