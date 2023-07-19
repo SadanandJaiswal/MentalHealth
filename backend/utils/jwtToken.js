@@ -30,7 +30,7 @@ const sendToken = (user, statuscode, res, isLocalhost) => {
     const options = {
       expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
       httpOnly: false,
-      domain: domain, // Set the domain based on the environment
+      domain: "*", // Set the domain based on the environment
       secure: !isLocalhost, // Set to true for production (HTTPS)
       sameSite: "None", // You can keep this as "None" for cross-site access with HTTPS
     };

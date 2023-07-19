@@ -11,7 +11,8 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use(cors());
-app.use(cors({ origin:'https://jeevanbandhu.netlify.app' }));
+// app.use(cors({ origin:'https://jeevanbandhu.netlify.app', credentials:true }));
+app.use(cors({origin:"*", credentials:true}));
 
 
 const routes = require('./routes/routes')

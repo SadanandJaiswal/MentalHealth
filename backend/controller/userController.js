@@ -43,25 +43,25 @@ exports.loginUser = async (req,res,next)=>{
 
     if(!email || !password)
     {
-        return next(new ErrorHander("Please Enter Email and Password"))
+        return next(new Error("Please Enter Email and Password"))
     }
 
     const user = await User.findOne({email}).select("password");
 
     if(!user)
     {
-        return next(new ErrorHander("Invalid email or password"));
+        return next(new Error("Invalid email or password"));
     }
 
     const isPasswordMatched = user.comparePassword(password);
 
     if(!isPasswordMatched)
     {
-        return next(new ErrorHander("Invalid email or password"));
+        return next(new Error("Invalid email or password"));
     }
 
     const isLocalhost = req.headers.origin.includes("localhost");
-    
+
     sendToken(user, 201, res, isLocalhost);
 
     console.log('successfully login')
