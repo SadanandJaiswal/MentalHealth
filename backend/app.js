@@ -18,6 +18,7 @@ let origin ;
 app.use((req,res,next)=>{
     origin = req.headers.origin;
     console.log('origin is ',origin);
+    next();
 })
 
 // const allowedOrigins = ['http://localhost', 'https://jeevanbandhu.netlify.app'];
