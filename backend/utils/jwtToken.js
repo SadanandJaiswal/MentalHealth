@@ -29,7 +29,8 @@ const sendToken = (user, statuscode, res, isLocalhost) => {
     // Options for cookie
     const options = {
       expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
-      httpOnly: false,
+      httpOnly: true,
+      domain: 'http://localhost',
     };
     
     // domain: "*", // Set the domain based on the environment
