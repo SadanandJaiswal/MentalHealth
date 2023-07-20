@@ -14,11 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(cors({ origin:'https://jeevanbandhu.netlify.app', credentials:true }));
 // app.use(cors({origin:"*", credentials:true}));
 
-// let origin ;
-// app.use((req,res,next)=>{
-//     origin = req.headers.origin;
-//     console.log('origin is ',origin);
-// })
+let origin ;
+app.use((req,res,next)=>{
+    origin = req.headers.origin;
+    console.log('origin is ',origin);
+})
 
 // const allowedOrigins = ['http://localhost', 'https://jeevanbandhu.netlify.app'];
 
