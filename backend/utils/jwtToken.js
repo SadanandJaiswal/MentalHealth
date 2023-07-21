@@ -30,7 +30,7 @@ const sendToken = (user, statuscode, res, isLocalhost) => {
     const options = {
         expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
         httpOnly: true,
-        domain: domain, // Correct domain without the protocol
+        // domain: domain, // Correct domain without the protocol
         secure: !isLocalhost, // Set to true for production (HTTPS)
         sameSite: isLocalhost ? "Lax" : "None",
     };
@@ -39,6 +39,9 @@ const sendToken = (user, statuscode, res, isLocalhost) => {
     // // secure: !isLocalhost, // Set to true for production (HTTPS)
     // secure: true,
     // sameSite: "None", // You can keep this as "None" for cross-site access with HTTPS
+
+
+    req.session.token = token;
 
     res
       .status(statuscode)

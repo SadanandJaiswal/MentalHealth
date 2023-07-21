@@ -3,7 +3,9 @@ const app = express();
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const bodyParser = require("body-parser");
-const cors = require('cors')
+const cors = require('cors');
+
+const session = require('express-session');
 
 
 app.use(express.json());
@@ -21,12 +23,27 @@ app.use((req,res,next)=>{
     next();
 })
 
+app.use(
+    session({
+      secret: 'asdfghjk_{}|:<?,lqwer./;[123456789tyuiop0,!@#$%^&*()-=zxcvnm',
+      cookie: {
+        sameSite: process.env.NODE_ENV === "production" ? 'none' : 'lax',
+        maxAge: 60*60*24*30,
+        secure: process.env.NODE_ENV === "production",
+      },
+      resave: true,
+      saveUninitialized: false,
+      ttl: 60 * 60 * 24 * 30
+    })
+  );
+
 // const allowedOrigins = ['http://localhost', 'https://jeevanbandhu.netlify.app'];
 
 const allowOrigin = ['http://localhost:3000', 'https://jeevanbandhu.netlify.app' ];
 
 app.use(cors({
     origin:allowOrigin, 
+    methods: ["GET", "POST", "DELETE", "PUT"],
     credentials:true
 }))
 
