@@ -20,7 +20,7 @@
 //     });
 // }
 
-const sendToken = (user, statuscode, res, isLocalhost) => {
+const sendToken = (user, statuscode, res, isLocalhost, req) => {
     const token = user.getJWTToken();
   
     // Determine the appropriate domain based on the environment
