@@ -4,9 +4,9 @@ const ErrorHander = require("../utils/errorhandeler");
 
 
 exports.isAuthenticatedUser = async(req,res,next)=>{
-    // const {token} = req.cookies;
+    const {token} = req.cookies;
 
-    const token = req.session.token;
+    // const token = req.session.token;
 
     // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTliM2Q4MGRlYzUwZjA1ZWRmMzU2NSIsImlhdCI6MTY4Nzc5NDY0OSwiZXhwIjoxNjg3Nzk0NjU5fQ.EIUsqW8Wl-ukeOChGIWT8o68rYgc8gvR-KDW_STxa5s";
 

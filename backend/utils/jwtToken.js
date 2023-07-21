@@ -41,7 +41,7 @@ const sendToken = (user, statuscode, res, isLocalhost, req) => {
     // sameSite: "None", // You can keep this as "None" for cross-site access with HTTPS
 
 
-    req.session.token = token;
+    // req.session.token = token;
 
     res
       .status(statuscode)
