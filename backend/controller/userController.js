@@ -32,7 +32,7 @@ exports.registerUser = async (req, res, next) => {
     // Determine if the request is coming from localhost or the deployed domain
     const isLocalhost = req.headers.origin.includes("localhost");
   
-    sendToken(user, 201, res, isLocalhost);
+    sendToken(user, 201, res, isLocalhost, req);
     console.log('user registered successfully');
   };
   
@@ -62,7 +62,7 @@ exports.loginUser = async (req,res,next)=>{
 
     const isLocalhost = req.headers.origin.includes("localhost");
 
-    sendToken(user, 201, res, isLocalhost);
+    sendToken(user, 201, res, isLocalhost,req);
 
     console.log('successfully login')
 }
@@ -71,9 +71,17 @@ exports.loginUser = async (req,res,next)=>{
 // logout 
 exports.logout = async(req,res,next)=>{
 
-    res.cookie('token',null,{
-        expires:new Date(Date.now()),
-        httpOnly:true
+    // res.cookie('token',null,{
+    //     expires:new Date(Date.now()),
+    //     httpOnly:true
+    // })
+    req.session.destroy((err)=>{
+        if (err) {
+          console.error('Error destroying session:', err);
+        }
+        else{
+            res.clearCookie('token');
+        }
     })
     res.cookie('userData',null,{
         expires:new Date(Date.now()),
