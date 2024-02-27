@@ -14,7 +14,7 @@ const MeditationDetails = () => {
 
   const { steps, benefits, problems } = meditation;
 
-  // const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
   // const [highlightedStep, setHighlightedStep] = useState(null);
 
   useEffect(() => {
@@ -29,6 +29,8 @@ const MeditationDetails = () => {
     } else {
       setCurrentStepIndex(0);
     }
+
+    console.log(currentStepIndex);
 
     return () => {
       clearInterval(intervalId);

@@ -9,8 +9,8 @@ import "../style/Disorder.css";
 const Disorder = () => {
   const { disorder } = useParams();
   const [mentalDisorders, setMentalDisorders] = useState([]);
-  //   const [loading, setLoading] = useState(true);
-  //   const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,6 +29,11 @@ const Disorder = () => {
 
     fetchData();
   }, []);
+
+  useEffect(()=>{
+    console.log(loading);
+    console.log(error);
+  },[loading, error])
 
   return (
     <>
