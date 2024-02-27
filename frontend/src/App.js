@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
-import { Link } from 'react-router-dom';
-import Cookies from 'js-cookie';
+// import { Link } from 'react-router-dom';
+// import Cookies from 'js-cookie';
 
 import Home from "./pages/Home";
 import About from "./pages/About";

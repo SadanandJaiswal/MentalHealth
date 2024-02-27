@@ -222,7 +222,7 @@ const AudioPlayer = () => {
                 </div>
                 <div className="liked-song">
                   {
-                    ((currentSongIndex==index) && isPlaying )?
+                    ((currentSongIndex===index) && isPlaying )?
                     
                     <div className="like_wave">
                       <div class="music-wave">

@@ -14,15 +14,15 @@ const Sleep = () => {
   const clickHandler1 = () => {
       navigate('/sleep/intro');
   }
-  const clickHandler2 = () => {
-      navigate('/sleep/basics');
-  }
-  const clickHandler3 = () => {
-    navigate('/sleep/disorder');
-  }
-  const clickHandler4 = () => {
-      navigate('/sleep/tips');
-  }
+  // const clickHandler2 = () => {
+  //     navigate('/sleep/basics');
+  // }
+  // const clickHandler3 = () => {
+  //   navigate('/sleep/disorder');
+  // }
+  // const clickHandler4 = () => {
+  //     navigate('/sleep/tips');
+  // }
   return (
     <div>
       <h1> Sleep </h1>

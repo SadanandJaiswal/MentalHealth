@@ -1,10 +1,10 @@
 import React from 'react'
 import './About.css';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const About = () => {

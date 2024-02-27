@@ -63,24 +63,24 @@ const Sidebar = ({ children }) => {
     setIsOpen(!isOpen);
   };
 
-  const inputAnimation = {
-    hidden: {
-      width: 0,
-      padding: 0,
-      opacity: 0,
-      transition: {
-        duration: 0.2,
-      },
-    },
-    show: {
-      width: '140px',
-      opacity: 1,
-      padding: '5px 15px',
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
+  // const inputAnimation = {
+  //   hidden: {
+  //     width: 0,
+  //     padding: 0,
+  //     opacity: 0,
+  //     transition: {
+  //       duration: 0.2,
+  //     },
+  //   },
+  //   show: {
+  //     width: '140px',
+  //     opacity: 1,
+  //     padding: '5px 15px',
+  //     transition: {
+  //       duration: 0.2,
+  //     },
+  //   },
+  // };
 
   const showAnimation = {
     hidden: {

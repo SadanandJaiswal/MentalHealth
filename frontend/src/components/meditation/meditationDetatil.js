@@ -14,8 +14,8 @@ const MeditationDetails = () => {
 
   const { steps, benefits, problems } = meditation;
 
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
-  const [highlightedStep, setHighlightedStep] = useState(null);
+  // const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  // const [highlightedStep, setHighlightedStep] = useState(null);
 
   useEffect(() => {
     let intervalId = null;
@@ -35,10 +35,10 @@ const MeditationDetails = () => {
     };
   }, [showSteps, steps.length]);
 
-  const toggleSteps = () => {
-    setShowSteps((prevShowSteps) => !prevShowSteps);
-    setHighlightedStep(null);
-  };
+  // const toggleSteps = () => {
+  //   setShowSteps((prevShowSteps) => !prevShowSteps);
+  //   setHighlightedStep(null);
+  // };
 
   const toggleBenefits = () => {
     setShowBenefits((prevShowBenefits) => !prevShowBenefits);
@@ -48,9 +48,9 @@ const MeditationDetails = () => {
     setShowProblems((prevShowProblems) => !prevShowProblems);
   };
 
-  const handleStepClick = (index) => {
-    setHighlightedStep(index);
-  };
+  // const handleStepClick = (index) => {
+  //   setHighlightedStep(index);
+  // };
 
   if (!meditation) {
     return <div>Invalid Meditation ID</div>;
