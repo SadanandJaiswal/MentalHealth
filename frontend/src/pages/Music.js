@@ -1,4 +1,4 @@
-import React, { useState, useRef , useEffect} from 'react';
+import React, { useState, useRef } from 'react';
 import ReactPlayer from 'react-player';
 import "../style//Music.css";
 import musicFile1 from "../components/songs/yt1s.com - Relaxing Sounds.mp3";

@@ -37,7 +37,7 @@ const MeditationDetails = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [steps.length, currentStepIndex]);
+  }, [steps.length, currentStepIndex, showSteps]);
 
   // const toggleSteps = () => {
   //   setShowSteps((prevShowSteps) => !prevShowSteps);
