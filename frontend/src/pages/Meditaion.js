@@ -9,7 +9,6 @@ const Meditation = () => {
       <div className="meditation-container">
        <MeditationCard></MeditationCard>
       </div>
-    
   );
 };
 

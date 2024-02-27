@@ -30,10 +30,11 @@ const Sleep = () => {
 
         {/* Introduction */}
         <Card sx={{ width: '50%', marginRight: '1rem', backdropFilter: 'blur(8px)', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '20px' }}>
+
           <CardMedia
             sx={{ height: 140 }}
-            image="https://i.cbc.ca/1.6534070.1658953881!/fileImage/httpImage/sleep-app-reviews.jpg"
             title="green iguana"
+            image="https://i.cbc.ca/1.6534070.1658953881!/fileImage/httpImage/sleep-app-reviews.jpg"
             />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
@@ -58,8 +59,8 @@ const Sleep = () => {
         <Card sx={{ width: '50%', marginRight: '1rem', backdropFilter: 'blur(8px)', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '20px' }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="https://www.cchwyo.org/images/blog/2022/iStock-851356944.jpg"
             title="green iguana"
+            image="https://www.cchwyo.org/images/blog/2022/iStock-851356944.jpg"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
@@ -84,8 +85,8 @@ const Sleep = () => {
         <Card sx={{ width: '50%', marginRight: '1rem', backdropFilter: 'blur(8px)', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '20px' }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="https://www.drlalitmahajan.com/wp-content/uploads/2019/11/23668ed.jpg"
             title="green iguana"
+            image="https://www.drlalitmahajan.com/wp-content/uploads/2019/11/23668ed.jpg"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
@@ -110,8 +111,8 @@ const Sleep = () => {
         <Card sx={{ width: '50%', marginRight: '1rem', backdropFilter: 'blur(8px)', backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '20px' }}>
           <CardMedia
             sx={{ height: 140 }}
-            image="https://hips.hearstapps.com/hmg-prod/images/woman-falls-asleep-and-counts-sheep-insomnia-royalty-free-illustration-1675196187.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*"
             title="green iguana"
+            image="https://hips.hearstapps.com/hmg-prod/images/woman-falls-asleep-and-counts-sheep-insomnia-royalty-free-illustration-1675196187.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">

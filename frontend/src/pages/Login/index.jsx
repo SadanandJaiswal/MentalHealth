@@ -23,7 +23,7 @@ const LoginForm = () => {
   const handelLogin = (event) => {
     event.preventDefault();
 
-	axios.post('/login',{email,password})
+	axios.post('https://mentalhealthproject-jeevenbandhu.onrender.com/login',{email,password})
 	.then(response=>{
 		console.log('response is ');
 		console.log(response);

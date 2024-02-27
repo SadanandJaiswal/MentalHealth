@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 
 const mentalDisorderApiData = ()=>{
-    axios.get('/mentalDisorderDetails')
+    axios.get('https://mentalhealthproject-jeevenbandhu.onrender.com/mentalDisorderDetails')
     .then((response)=>{
       const data = response.data.data;
       console.log('disorderr data')
@@ -18,7 +18,7 @@ const mentalDisorderApiData = ()=>{
 
 
 const meditationApiData = ()=>{
-    axios.get('/meditationDetails')
+    axios.get('https://mentalhealthproject-jeevenbandhu.onrender.com/meditationDetails')
     .then((response)=>{
       const data = response.data.data;
       console.log('meditation data')
@@ -33,7 +33,7 @@ const meditationApiData = ()=>{
 
 
 const sleepApiData = ()=>{
-    axios.get('/sleepDetails')
+    axios.get('https://mentalhealthproject-jeevenbandhu.onrender.com/sleepDetails')
     .then((response)=>{
       const data = response.data.data;
       console.log('sleep data')
@@ -48,7 +48,7 @@ const sleepApiData = ()=>{
 
 
 const quoteApiData = ()=>{
-    axios.get('/getQuotes')
+    axios.get('https://mentalhealthproject-jeevenbandhu.onrender.com/getQuotes')
     .then((response)=>{
       const data = response.data.data;
       console.log('quotes data')
@@ -62,7 +62,7 @@ const quoteApiData = ()=>{
 }
 
 const musicApiData = ()=>{
-    axios.get('/musicDetails')
+    axios.get('https://mentalhealthproject-jeevenbandhu.onrender.com/musicDetails')
     .then((response)=>{
       const data = response.data.data;
       console.log('music data')

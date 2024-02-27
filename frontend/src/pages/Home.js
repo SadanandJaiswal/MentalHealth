@@ -137,7 +137,7 @@ const Home = () => {
               className="fixed-button button-33"
               style={{ fontSize: "13px" }}
             >
-              LOGIN/SIGNUP
+              LOGIN
             </button>
           </Link>
         </div>

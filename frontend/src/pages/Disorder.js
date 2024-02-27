@@ -15,7 +15,7 @@ const Disorder = () => {
   useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get('/mentalDisorderDetails');
+          const response = await axios.get('https://mentalhealthproject-jeevenbandhu.onrender.com/mentalDisorderDetails');
           const data = response.data.data;
           setMentalDisorders(data);
         } catch (error) {

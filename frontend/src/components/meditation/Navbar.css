@@ -203,14 +203,14 @@ width: 100%;
   gap: 5px;
 }
 
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
 
 .card-body {
   font-family: "Roboto", sans-serif;
   font-size: 5px;
   /* Adjust the font size as needed */
 }
-=======
+/* ======= */
 /* .card {
   position: relative;
   width: 300px;
@@ -218,7 +218,7 @@ width: 100%;
   overflow: hidden;
   border-radius: 4px;
 } */
->>>>>>> 7eddbbfdb70907dbe8ddfb3ee4faad289085ee11
+/* >>>>>>> 7eddbbfdb70907dbe8ddfb3ee4faad289085ee11 */
 
 
 .card {
@@ -264,9 +264,10 @@ width: 100%;
 }
 
 /* navber */
-.
+
 
 /* Custom styling for the navbar links */
+
 .navbar-nav .nav-item {
   margin-right: 10px;
 }
@@ -462,18 +463,20 @@ svg:not(:root).svg-inline--fa {
   transform: translate(8px, 8px);
   transition: transform .2s ease-out;
   z-index: -1;
-}<!-- HTML !-->
-<button class="button-64" role="button"><span class="text">Button 64</span></button>
+}
+
+/* <!-- HTML !-->
+<button class="button-64" role="button"><span class="text">Button 64</span></button> */
 
 /* CSS */
-<!-- HTML !-->
-<button class="button-82-pushable" role="button">
+/* <!-- HTML !--> */
+/* <button class="button-82-pushable" role="button">
   <span class="button-82-shadow"></span>
   <span class="button-82-edge"></span>
   <span class="button-82-front text">
     Button 82
   </span>
-</button>
+</button> */
 
 /* CSS */
 .button-82-pushable {

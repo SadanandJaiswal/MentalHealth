@@ -10,7 +10,7 @@ const Quotes = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('/getQuotes');
+        const response = await axios.get('https://mentalhealthproject-jeevenbandhu.onrender.com/getQuotes');
         const data = response.data.data;
         setQuotes(data);
       } catch (error) {
@@ -19,7 +19,7 @@ const Quotes = () => {
         setLoading(false);
       }
     };
-
+        
     fetchData();
   }, []);
 

@@ -8,7 +8,7 @@ function Logout() {
 
     const navigate = useNavigate();
 
-    axios.get('/logout')
+    axios.get('https://mentalhealthproject-jeevenbandhu.onrender.com/logout')
     .then((response)=>{
         console.log('response is');
         console.log(response);

@@ -54,7 +54,7 @@
 import axios from 'axios';
 
 const meditationApiData = ()=>{
-  axios.get('/meditationDetails')
+  axios.get('https://mentalhealthproject-jeevenbandhu.onrender.com/meditationDetails')
   .then((response)=>{
     const data = response.data.data;
     console.log('meditation data')

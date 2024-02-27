@@ -25,13 +25,14 @@ const LoginForm = () => {
 		const email = event.target.email.value;
 		const password = event.target.password.value;
 
-		axios.post("/register",{name,email,password})
+		axios.post("https://mentalhealthproject-jeevenbandhu.onrender.com/register",{name,email,password})
 		.then(response=>{
 			console.log('response is ');
 			console.log(response);
 			if(response.data)
 			{
-				axios.get("/me").then(res=>{
+				axios.get("https://mentalhealthproject-jeevenbandhu.onrender.com/me")
+        .then(res=>{
 					Cookies.set('userData', JSON.stringify(res.data) ,  { expires: 10*86400*1000 });
 					if(Cookies.get('userData'))
 					{

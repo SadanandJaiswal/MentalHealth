@@ -39,7 +39,7 @@ const Profile= () => {
     const updateProfile=()=>{
       if(updateData.updatedName || updateData.updatedEmail)
       {
-        axios.put('/me/update ',{
+        axios.put('https://mentalhealthproject-jeevenbandhu.onrender.com/me/update ',{
           name:updateData.updatedName,
           email:updateData.updatedEmail
         })
