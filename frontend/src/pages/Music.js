@@ -126,11 +126,11 @@ const AudioPlayer = () => {
     //   setMuiscLike((likes)=> [...likes,0]);
     // }
 
-    useEffect(() => {
-      // Initialize musicLike state once when the component mounts
-      const initialLikes = songs.map(() => 0);
-      setMuiscLike(initialLikes);
-    }, []);
+    // useEffect(() => {
+    //   // Initialize musicLike state once when the component mounts
+    //   const initialLikes = songs.map(() => 0);
+    //   setMuiscLike(initialLikes);
+    // }, []);
 
 
 

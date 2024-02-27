@@ -6,11 +6,13 @@ import Timer from "./timer";
 import Bton from "./Button";
 
 const MeditationDetails = () => {
-  const [showSteps, setShowSteps] = useState(false);
+  // const [showSteps, setShowSteps] = useState(false);
   const [showBenefits, setShowBenefits] = useState(false);
   const [showProblems, setShowProblems] = useState(false);
   const { id } = useParams();
   const meditation = meditationTypes.find((meditation) => meditation.id === id);
+
+  const showSteps = false;
 
   const { steps, benefits, problems } = meditation;
 
@@ -35,7 +37,7 @@ const MeditationDetails = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [showSteps, steps.length]);
+  }, [steps.length, currentStepIndex]);
 
   // const toggleSteps = () => {
   //   setShowSteps((prevShowSteps) => !prevShowSteps);

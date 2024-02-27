@@ -22,7 +22,8 @@ const Profile= () => {
     {
       navigate('/login');
     }
-  },[])
+}, [userData, navigate]);
+
 
   const handelToggle = ()=>{
     setToggleUpdate(!toggleUpdate);
